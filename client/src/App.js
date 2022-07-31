@@ -1,9 +1,9 @@
 import React from "react";
 // Nav Bar
-import NavBar from "./Components/NavBar";
+import NavBar from "./components/NavBar";
 // Pages
-import LandingPage from "./Pages/LandingPage";
-import ProductPage from "./Pages/ProductPage";
+import LandingPage from "./pages/LandingPage";
+import ProductPage from "./pages/ProductPage";
 // React Routing
 import {Routes, Route} from 'react-router';
 

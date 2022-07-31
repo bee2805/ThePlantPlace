@@ -1,9 +1,7 @@
-import NavBar from "../Components/NavBar";
-
 function ProductPage () {
     return(
         <div className="ProductPage">
-            This is the Product Page.
+            This is the product page
         </div>
     )
 }
