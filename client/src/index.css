@@ -143,21 +143,25 @@ a:link{
   background-color: #F3EBDA;
 }
 
+/* contains new items to store */
 .newItemContainer{
-  width: 100%;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  margin: 0 auto;
+  width: 70%;
+  height: auto;
+  padding: 5%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
   text-align: center;
 }
 
 .newItemContainer p{
-  margin-bottom: 2%;
+  margin-bottom: 5%;
 }
 
 /* slider */
 .productCard{
-  width: 20% !important;
-  height: 55vh;
+  width: 85% !important;
+  height: auto;
   border-radius: 20px;
   background-color: #99A278;
 }
@@ -181,4 +185,33 @@ a:link{
   text-align: left;
   margin-left: 5%;
   margin-top: 1%;
+}
+
+.slick-prev:before{
+  color: #2d2d2d;
+}
+
+.slick-next:before{
+  color: #2d2d2d;
+}
+
+.slick-current{
+  width: 9.5% !important;
+  margin-left: -1%;
+  margin-right: -1%;
+}
+
+.slick-track{
+  height: auto;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.slick-slide{
+  visibility: hidden!important;
+}
+
+.slick-active{
+  visibility: visible!important;
 }
