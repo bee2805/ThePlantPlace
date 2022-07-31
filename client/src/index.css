@@ -1,9 +1,13 @@
+/* imports */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+/* --------------------------------------------- */
+/* general styling */
 body{
   margin: 0;
 }
 
-/* --------------------------------------------- */
-/* general styling */
 h1{
   margin-top: 0;
   margin-bottom: 1%;
@@ -146,4 +150,35 @@ a:link{
   text-align: center;
 }
 
+.newItemContainer p{
+  margin-bottom: 2%;
+}
+
 /* slider */
+.productCard{
+  width: 20% !important;
+  height: 55vh;
+  border-radius: 20px;
+  background-color: #99A278;
+}
+
+.productCard img{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+}
+
+.productCard h3{
+  font-family: 'Roboto', sans-serif;
+  margin-top: 5%;
+  text-align: left;
+  margin-left: 5%;
+}
+
+.productCard p{
+  font-family: 'Roboto', sans-serif;
+  margin-top: 3%;
+  text-align: left;
+  margin-left: 5%;
+  margin-top: 1%;
+}

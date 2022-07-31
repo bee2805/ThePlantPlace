@@ -1,4 +1,9 @@
+import React from 'react';
+
+
 function LandingPage () {
+
+
     return(
         <div className="LandingPage">
             <div className="header">
@@ -19,6 +24,7 @@ function LandingPage () {
                 in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat <br/>
                 non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
+            
             </div>
         </div>
     )
