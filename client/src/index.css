@@ -163,7 +163,7 @@ a:link{
   width: 85% !important;
   height: auto;
   border-radius: 20px;
-  background-color: #99A278;
+  background-color: #67734B;
 }
 
 .productCard img{
@@ -214,4 +214,66 @@ a:link{
 
 .slick-active{
   visibility: visible!important;
+}
+
+/* sales */
+.saleItemContainer{
+  width: 90%;
+  height: auto;
+  text-align: center;
+  padding: 5%;
+}
+
+.saleItemContainer p{
+  margin-bottom: 3%;
+}
+
+.sales{
+  width: 100%;
+  height: auto;
+}
+
+.saleInfo{
+  width: 35%;
+  padding: 2%;
+  height: auto;
+  background-color: #D3C5A7;
+  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+  float: left;
+}
+
+.saleInfo h2{
+  margin-bottom: 2%;
+}
+
+.saleInfo p{
+  margin-bottom: 5%;
+}
+
+.saleImage{
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  background-image: url('assets/salePromo.jpg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+button{
+  padding: 2%;
+  background-color: #2d2d2d;
+  color: white;
+  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-top: 5%;
+}
+
+button:hover{
+  background-color: white;
+  color: #2d2d2d;
 }
