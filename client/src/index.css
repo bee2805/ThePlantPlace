@@ -207,6 +207,95 @@ input{
 
 /* --------------------------------------------- */
 /* CART MODAL */
+.CartModal{
+  margin-top: -1%;
+  width: 20%;
+  height: auto;
+  padding: 2%;
+  background-color: white;
+  box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
+  -webkit-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
+  -moz-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
+  z-index: 3;
+  position: absolute;
+  margin-left: 76%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.CartModal .shopping-bag{
+  margin-top: 0;
+  margin-right: 4%;
+  background-image: url('assets/icons/shopping-bag-hover.svg');
+  float: left;
+}
+
+.CartModal h2{
+  margin-top: 1%;
+}
+
+.CartModal p{
+  color: #2d2d2d;
+}
+
+.CartModal button{
+  margin-top: 5%;
+  width: 100%;
+}
+
+.itemNo{
+  margin-top: 10%;
+}
+
+.itemImg{
+  width: 90px;
+  height: 90px;
+  margin-left: 6%;
+  background-image: url('assets/monstera.jpg');
+  background-position: center;
+  background-size: cover;
+  float: left;
+  margin-top: 4%;
+}
+
+.itemImg2{
+  margin-left: 6%;
+  width: 90px;
+  height: 90px;
+  background-image: url('assets/MonsteraMinima.jpg');
+  background-position: center;
+  background-size: cover;
+  float: left;
+  margin-top: 4%;
+}
+
+.cartItem{
+  height: 120px;
+  border-bottom: 2px solid #E2DFD2;
+}
+
+.itemInfo{
+  float: left;
+  margin-left: 6%;
+  margin-top: 4%;
+}
+
+.itemInfo p{
+  margin-top: 2.5%;
+}
+
+.price{
+  font-weight: bold;
+}
+
+.removeItem{
+  color: red!important;
+  cursor: pointer;
+}
+
+.removeItem:hover{
+  color: darkred!important;
+}
 
 /* --------------------------------------------- */
 /* HOME PAGE STYLING */
