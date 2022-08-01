@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 // carousel imports
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+// images for carousel
 import monstera from "../assets/monstera.jpg";
 import Zeylanica from "../assets/Zeylanica.jpg";
 import ScindapsusPictus from "../assets/ScindapsusPictus.jpg";
@@ -18,6 +19,8 @@ function ProductSlider(){
         slidesToShow: 3,
         dot:true,
         speed: 1000
+        // autoplay: ture,
+        // autoplaySpeed: 3000
     }
 
 
