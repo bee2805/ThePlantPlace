@@ -60,7 +60,8 @@ function LandingPage () {
 
             {/* footer */}
             <div className='footer'>
-                <p></p>
+                <p>ThePlantPlace©2022</p>
+                <a href="mailto: ThePlantPlace@gmail.com"><div className='mail'></div></a>
             </div>
         </div>
     )
