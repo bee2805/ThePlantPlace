@@ -14,7 +14,7 @@ function LandingPage () {
                 ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit<br/>
                 in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat <br/>
                 non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <button>View Products</button>
+                <a href='/ProductPage'><button>View Products</button></a>
             </div>{/* header */}
 
             {/* new to store */}

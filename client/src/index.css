@@ -15,6 +15,13 @@ h1{
   color: #2d2d2d;
 }
 
+h2{
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #2d2d2d;
+  margin-bottom: 3%;
+}
+
 h3{
   margin-top: 0;
   margin-bottom: 0;
@@ -145,6 +152,61 @@ a:link{
   background-image: url('assets/icons/user-img-hover.svg');
 }
 
+/* --------------------------------------------- */
+/* LOGIN MODAL */
+.LoginModal{
+  width: 30%;
+  margin-left: 32%;
+  margin-top: 15%;
+  height: auto;
+  padding: 3%;
+  background-color: white;
+  position: absolute;
+  position: fixed;
+  z-index: 2;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
+  -webkit-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
+  -moz-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
+  /* animation: fadeIn 1s;
+  animation: fadeOut 1s; */
+}
+
+/* @keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  100% { opacity: 1; }
+  0% { opacity: 0; }
+} */
+
+.closeModal{
+  width: 15px;
+  height: 15px;
+  background-image: url('assets/icons/close.svg');
+  float: right;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.closeModal:hover{
+  background-image: url('assets/icons/close-hover.svg');
+}
+
+input{
+  width: 50%;
+  margin-bottom: 3%;
+  border-radius: 20px;
+  padding: 10px 30px;
+  border: 2px solid #67734B;
+}
+
+/* --------------------------------------------- */
+/* CART MODAL */
 
 /* --------------------------------------------- */
 /* HOME PAGE STYLING */
@@ -258,8 +320,8 @@ a:link{
 .saleInfo{
   width: 40%;
   padding: 2%;
-  padding-top: 4.2%;
-  padding-Bottom: 4.2%;
+  padding-top: 5%;
+  padding-Bottom: 5%;
   height: auto;
   background-color: #D3C5A7;
   border-radius: 20px;
