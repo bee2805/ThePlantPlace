@@ -3,6 +3,7 @@ import ProductCard from '../components/ProductCard';
 
 function ProductPage () {
     return(
+        <>
         <div className="ProductPage">
             <h3>Shop Our</h3>
             <h1>Product Range</h1>
@@ -20,14 +21,15 @@ function ProductPage () {
                 <ProductCard/>
             </div>{/* products */}
 
-            {/* footer */}
-            <div className='footer'>
-                <p>ThePlantPlace©2022</p>
-                <a href="tel:123-456-7890"><div className='call'></div></a>
-                <a href="mailto: ThePlantPlace@gmail.com"><div className='mail'></div></a>
-                <a href="https://instagram.com"><div className='instagram'></div></a>
-            </div>{/* footer */}
         </div>
+        {/* footer */}
+        <div className='footer'>
+            <p>ThePlantPlace©2022</p>
+            <a href="tel:123-456-7890"><div className='call'></div></a>
+            <a href="mailto: ThePlantPlace@gmail.com"><div className='mail'></div></a>
+            <a href="https://instagram.com"><div className='instagram'></div></a>
+        </div>{/* footer */}
+        </>
     )
 }
 
