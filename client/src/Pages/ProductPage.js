@@ -19,6 +19,7 @@ function ProductPage () {
                 <ProductCard/>
                 <ProductCard/>
                 <ProductCard/>
+                <ProductCard/>
             </div>{/* products */}
 
         </div>

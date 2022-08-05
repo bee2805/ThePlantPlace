@@ -7,10 +7,11 @@ function ProductCard () {
             <a href="/IndividualProduct">
                 <div className="productCard">
                     <img src={monstera} alt="img"/>
-                    <div className="productInfo">
-                        <h3>Product Name</h3>
+                    <div className="cardInfo">
+                        <p className="productName">Product Name</p>
                         <p>R150</p>
                     </div>
+                    <div className="prodCart"></div>
                 </div>
             </a>
         </>

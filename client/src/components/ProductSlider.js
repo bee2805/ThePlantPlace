@@ -27,7 +27,7 @@ function ProductSlider(){
     return(
         <div>
             <Slider {...settings}>
-                <div className="productCard">
+                <div className="sliderProductCard">
                     <img src={monstera} alt="img"/>
                     <div className="productInfo">
                         <h3>Product Name</h3>
@@ -35,7 +35,7 @@ function ProductSlider(){
                     </div>
                 </div>
 
-                <div className="productCard">
+                <div className="sliderProductCard">
                     <img src={Zeylanica} alt="img"/>
                     <div className="productInfo">
                         <h3>Product Name</h3>
@@ -43,7 +43,7 @@ function ProductSlider(){
                     </div>
                 </div>
 
-                <div className="productCard">
+                <div className="sliderProductCard">
                     <img src={ScindapsusPictus} alt="img"/>
                     <div className="productInfo">
                         <h3>Product Name</h3>
@@ -51,7 +51,7 @@ function ProductSlider(){
                     </div>
                 </div>
 
-                <div className="productCard">
+                <div className="sliderProductCard">
                     <img src={MonsteraMinima} alt="img"/>
                     <div className="productInfo">
                         <h3>Product Name</h3>

@@ -2,6 +2,7 @@ import React from "react";
 
 function IndividualProduct () {
     return(
+        <>
         <div className="IndividualProduct">
             <a href="/ProductPage"><div className="back"></div></a>
             <div className="productImage"></div>
@@ -25,9 +26,16 @@ function IndividualProduct () {
                     <input type="number" placeholder="qty"/>
                     <button>+ Add to Cart</button>
                 </div>
-                
             </div>
         </div>
+        {/* footer */}
+        <div className='footer'>
+            <p>ThePlantPlace©2022</p>
+            <a href="tel:123-456-7890"><div className='call'></div></a>
+            <a href="mailto: ThePlantPlace@gmail.com"><div className='mail'></div></a>
+            <a href="https://instagram.com"><div className='instagram'></div></a>
+        </div>
+        </>
     )
 }
 
