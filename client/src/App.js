@@ -6,6 +6,7 @@ import LandingPage from "./pages/LandingPage";
 import ProductPage from "./pages/ProductPage";
 import IndividualProduct from "./pages/IndividualProduct";
 import InventoryManagement from "./pages/InventoryManagement";
+import IncomingOrders from "./pages/IncomingOrders";
 // React Routing
 import {Routes, Route} from 'react-router';
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='/ProductPage' element={<ProductPage/>}/>
         <Route path='/IndividualProduct' element={<IndividualProduct/>}/>
         <Route path='/InventoryManagement' element={<InventoryManagement/>}/>
+        <Route path='/IncomingOrders' element={<IncomingOrders/>}/>
       </Routes>
     </div>
   );

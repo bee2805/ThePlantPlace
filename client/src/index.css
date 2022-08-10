@@ -611,6 +611,7 @@ a:link{
 .additionalInfo input{
   width: 8%;
   margin-right: 15%;
+  padding: 10px 15px;
 }
 
 .additionalInfo button{
@@ -738,6 +739,67 @@ a:link{
   box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
   -webkit-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
   -moz-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
+}
+
+/* --------------------------------------------- */
+/* INCOMING ORDERS */
+.IncomingOrders{
+  width: 80%;
+  padding: 10%;
+  height: auto;
+  text-align: center;
+  padding-bottom: 3%;
+  padding-top: 5%;
+}
+
+.tableHeadings{
+  margin-top: 5%;
+  margin-bottom: 1%;
+  width: 95%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.tableHeadings p{
+  font-size: large;
+  font-weight: bold;
+  color: #67734B
+}
+
+.orderItem{
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  width: 95%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: #99A278;
+  margin-bottom: 1.5%;
+  border-radius: 20px;
+}
+
+.orderItem img{
+  width: 50px;
+  border-radius: 10px;
+}
+
+.orderItem input{
+  width: 5%;
+  padding: 10px 15px;
+}
+
+.orderItem button{
+  background-color: #67734B;
+}
+
+.orderItem button:hover{
+  color: #99A278;
+  background-color: #2d2d2d;
 }
 
 /* --------------------------------------------- */
