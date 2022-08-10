@@ -1,7 +1,26 @@
 const express = require('express');
-const products = require('./products');
+const mongoose = require('mongoose');
+const routes = require('./routes');
+// access .env file
+require('dotenv/config');
+// const products = require('./products');
 
 const app = express();
+
+// middleware to access routes
+app.use(routes);
+// using body parser middleware
+// wont be able to request body without this
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
+
+mongoose.connect(process.env.DB_CONNECTION, (err) => {
+    if (err) {
+        console.log('no connection')
+    } else {
+        console.log('Connected to Mongo DB Atlas')
+    };
+});
 
 const PORT = process.env.PORT || 5000;
 
@@ -16,12 +35,6 @@ const PORT = process.env.PORT || 5000;
 
 // using the middleware
 // app.use(refine);
-
-
-// using body parser middleware
-// wont be able to request body without this
-app.use(express.json());
-app.use(express.urlencoded({extended:false}));
 
 
 // get all the products
@@ -104,4 +117,4 @@ app.delete('/api/deleteProduct/:id', (req, res) => {
 
 });
 
-app.listen(PORT, () => {console.log(`Server started on port ${PORT}`)});
+app.listen(PORT, () => {console.log(`Server started on Port: ${PORT}`)});
