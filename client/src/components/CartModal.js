@@ -1,4 +1,5 @@
 import React from "react";
+import CartItem from "./CartItem";
 
 function CartModal (props) {
 
@@ -14,27 +15,7 @@ function CartModal (props) {
 
             <p className="itemNo">You've added 1 item</p>
 
-            {/* cart Item */}
-            <div className="cartItem">
-                <div className="itemImg"></div>
-                <div className="itemInfo">
-                    <p>Monstera</p>
-                    <p className="price">R150</p>
-                    <p>Quantity</p>
-                    <p className="removeItem">Remove Item</p>
-                </div>
-            </div> {/* cart Item */}
-            
-            {/* cart Item */}
-            <div className="cartItem">
-                <div className="itemImg2"></div>
-                <div className="itemInfo">
-                    <p>Monstera Minima</p>
-                    <p className="price">R150</p>
-                    <p>Quantity</p>
-                    <p className="removeItem">Remove Item</p>
-                </div>
-            </div> {/* cart Item */}
+            {<CartItem/>}
 
             <button>CHECKOUT</button>
 

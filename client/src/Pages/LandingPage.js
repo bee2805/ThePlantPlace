@@ -1,9 +1,12 @@
 import React from 'react';
-import ProductSlider from '../components/ProductSlider';
-import ProductCard from '../components/ProductCard';
+import ProductSlider from '../Components/ProductSlider';
+import ProductCard from '../Components/ProductCard';
+import NavBar from '../Components/NavBar';
 
 function LandingPage () {
     return(
+        <>
+        <NavBar/>
         <div className="LandingPage">
             {/* header */}
             <div className="header">
@@ -54,6 +57,8 @@ function LandingPage () {
                         <ProductCard/>
                         <ProductCard/>
                         <ProductCard/>
+                        <ProductCard/>
+                        <ProductCard/>
                     </div>
                 </div>
             </div>{/* new to store */}
@@ -66,6 +71,7 @@ function LandingPage () {
                 <a href="https://instagram.com"><div className='instagram'></div></a>
             </div>
         </div>
+        </>
     )
 }
 

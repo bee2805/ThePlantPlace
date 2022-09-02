@@ -1,19 +1,16 @@
 import React from "react";
-// Nav Bar
-import NavBar from "./components/NavBar";
 // Pages
-import LandingPage from "./pages/LandingPage";
-import ProductPage from "./pages/ProductPage";
-import IndividualProduct from "./pages/IndividualProduct";
-import InventoryManagement from "./pages/InventoryManagement";
-import IncomingOrders from "./pages/IncomingOrders";
+import LandingPage from "./Pages/LandingPage";
+import ProductPage from "./Pages/ProductPage";
+import IndividualProduct from "./Pages/IndividualProduct";
+import InventoryManagement from "./Pages/InventoryManagement";
+import IncomingOrders from "./Pages/IncomingOrders"
 // React Routing
 import {Routes, Route} from 'react-router';
 
 function App() {
   return (
     <div className="App">
-      <NavBar/>
       <Routes>
         <Route path='/' element={<LandingPage/>}/> 
         <Route path='/ProductPage' element={<ProductPage/>}/>
