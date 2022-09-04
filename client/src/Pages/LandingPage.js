@@ -50,11 +50,12 @@ function LandingPage () {
             <div className="header">
                 <h3>Welcome to</h3>
                 <h1>The Plant Place</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br/>
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation<br/>
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit<br/>
-                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat <br/>
-                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <p>The plant Place prides themselves with being known for affordability when it comes to<br/>
+                house plants. The reason for this is because we include beautiful pots with each plant that<br/>
+                is included in the price! We have a passion for plants and love to share that passion<br/>
+                with fellow plant parents! Each plant is personally potted with love and includes a hand<br/>
+                a hand written care card to ensure you keep your babies happy!</p>
                 <a href='/ProductPage'><button>View Products</button></a>
             </div>{/* header */}
 
@@ -62,11 +63,10 @@ function LandingPage () {
             <div className="newItemContainer">
                 <h3>New to</h3>
                 <h1>Our Online Store</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br/>
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation<br/>
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit<br/>
-                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat <br/>
-                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>We always try our best to get the latest and greatest plants to liven up your living area<br/>
+                and help you make it as beautiful as possible! Our latest releases include some of the most popular<br/>
+                uas well as some of the rarest house plants that are difficult to find! Be sure to shop our newest<br/>
+                additions and grab the rare babies while you still can!<br/></p>
 
                 <ProductSlider/>
             </div>{/* new to store */}
@@ -75,9 +75,9 @@ function LandingPage () {
             <div className="saleItemContainer">
                 <h3>Now</h3>
                 <h1>On Sale!</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br/>
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation<br/>
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit<br/> 
+                <p>The Plant Place is proud to announce that we'll be having new specials each month!<br/>
+                These will include combo deals as well! Don't miss out this September as some of our<br/>
+                rarest and most expensive items are 20% off!!!<br/> 
                 </p>
 
                 <div className='sales'>

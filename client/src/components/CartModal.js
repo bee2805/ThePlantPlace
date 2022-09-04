@@ -6,12 +6,10 @@ function CartModal (props) {
     let cart = JSON.parse(sessionStorage.getItem('cart'));
     const [cartItem, setCartItem] = useState();
     
-
     const closeModal = () =>{
         props.rerender();
     }
 
-    
     useEffect(() => {
 
         if(!cart){

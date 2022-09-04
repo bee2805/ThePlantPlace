@@ -90,6 +90,13 @@ button{
   font-weight: bold;
   border: none;
   cursor: pointer;
+  color: #204133;
+  background-color: #7B977C;
+}
+
+button:hover{
+  color: #7B977C;
+  background-color: #204133;
 }
 
 .overflow{
@@ -630,7 +637,7 @@ slider .productCard{
   padding: 2%;
   padding-top: 4%;
   padding-Bottom: 4%;
-  height: 622px;
+  height: 570px;
   background-image: url('./assets/saleBg.jpg');
   background-position: center;
   background-size: cover;
@@ -638,16 +645,20 @@ slider .productCard{
   font-family: 'Roboto', sans-serif;
   float: left;
   margin-right: 3%;
+  box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
+  -webkit-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
+  -moz-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
 }
 
-.saleInfo button{
+.saleDescription button{
   margin-top: 10%;
-  color: #204133;
+  background-color: #204133;
+  color: #7B977C;
 }
 
 .saleDescription button:hover{
-  background-color: #204133;
-  color: white;
+  background-color: #7B977C;
+  color: #204133;
 }
 
 .saleDescription{
@@ -962,8 +973,12 @@ slider .productCard{
   animation: fadeIn 1s;
 }
 
-.EditProduct .closeModal{
+.closeModal:hover{
   background-image: url('assets/icons/close-hover.svg');
+}
+
+.EditProduct .closeModal{
+  background-image: url('assets/icons/close.svg');
   background-position: center;
   background-size: cover;
 }
@@ -1135,7 +1150,6 @@ label{
 .mail:hover{
   width: 35px;
   height: 35px;
-  background-image: url('assets/icons/mail-hover.svg');
 }
 
 .instagram{
@@ -1152,7 +1166,6 @@ label{
 .instagram:hover{
   width: 35px;
   height: 35px;
-  background-image: url('assets/icons/instagram-hover.svg');
 }
 
 .call{
@@ -1170,7 +1183,6 @@ label{
 .call:hover{
   width: 35px;
   height: 35px;
-  background-image: url('assets/icons/phone-call-hover.svg');
 }
 
 input[type="file"]{
