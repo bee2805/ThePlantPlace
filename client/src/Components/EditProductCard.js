@@ -19,6 +19,7 @@ function EditProductCard (props) {
             pot2={props.pot2}
             pot3={props.pot3}
             pot4={props.pot4}
+            discount={props.discount}
             editRender={props.editRender}
         />);
     }

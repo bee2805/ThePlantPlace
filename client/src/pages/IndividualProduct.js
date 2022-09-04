@@ -76,8 +76,7 @@ function IndividualProduct () {
                 sessionStorage.setItem('cart', JSON.stringify(cartArray));
 
             } else {
-                let cart = JSON.parse(sessionStorage.getItem('cart'));
-
+                
                 let addProductToCart = {
                     name: productData.productName,
                     img: imgUrl,

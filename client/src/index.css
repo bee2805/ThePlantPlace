@@ -2,6 +2,45 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+/* slider */
+.slick-prev:before{
+  color: #204133;
+}
+
+.slick-prev:before:hover{
+  color: #7B977C;
+}
+
+.slick-next:before{
+  color: #204133;
+}
+
+.slick-next:before:hover{
+  color: #7B977C;
+}
+
+.slick-active {
+  opacity: 0.7;
+}
+
+.slick-track .productCard{
+  margin-top: 15%;
+  margin-left: 20% !important;
+}
+
+.slick-list .slick-track{
+  height: 50vh;
+}
+
+.slick-center{
+  transform: scale(1.2);
+  transition: transform 500ms;
+}
+
+.slick-current{
+  opacity: 1;
+}
+
 /* --------------------------------------------- */
 /* general styling */
 body{
@@ -166,7 +205,7 @@ a:link{
 /* ProductCard */
 
 .productCard, .EditProductCard{
-  width: 225px;
+  width: 245px;
   height: fit-content;
   background-color: #204133;
   float: left;
@@ -180,8 +219,13 @@ a:link{
   -moz-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
 }
 
+slider .productCard{
+  margin: 0;
+}
+
 .productCard h2{
   color: white;
+  font-size: large;
 }
 
 .EditProductCard{
@@ -207,18 +251,45 @@ a:link{
 }
 
 .productCard p {
-  color: #E2DFD2;
+  color: white;
 }
 
+.currentPrice{
+  float: left;
+  margin-right: 5%;
+}
+
+.prevPrice{
+  text-decoration: line-through;
+  float: left;
+  color: #7B977C !important;
+}
+
+.discountPercentage{
+  margin-top: -10%;
+  width: 45px;
+  height: 45px;
+  float: right;
+  border-radius: 50%;
+  background-color: #7B977C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .discountPercentage p{
+  margin
+} */
+
 .EditProductCard p {
-  color: #E2DFD2;
+  color: white;
 }
 
 .productCard:hover{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border: 4px solid #204133;
+  border: 3px solid #204133;
 }
 
 .EditProductCard:hover{
@@ -244,6 +315,7 @@ a:link{
   margin-right: 10%;
   width: 140px;
   float: left;
+  background-color: #7B977C;
 }
 
 .EditProductCard button:hover{
@@ -260,10 +332,10 @@ a:link{
 }
 
 .cardInfo{
-  width: 50%;
+  width: 85%;
+  margin: 7%;
   text-align: left;
   float: left;
-  margin-left: 7%;
   margin-bottom: 5%;
   margin-top: 3%;
 }
@@ -406,11 +478,11 @@ a:link{
 
 .CartModal h2{
   margin-top: 1%;
-  color: #E2DFD2;
+  color: white;
 }
 
 .CartModal p{
-  color: #E2DFD2;
+  color: white;
 }
 
 .CartModal button{
@@ -516,11 +588,11 @@ a:link{
 /* contains new items to store */
 .newItemContainer{
   margin: 0 auto;
-  width: 70%;
+  width: 60%;
   height: auto;
-  padding: 5%;
-  padding-left: 0.5%;
-  padding-right: 0.5%;
+  padding-top: 0;
+  padding-left: 15%;
+  padding-right: 15%;
   text-align: center;
 }
 
@@ -529,77 +601,7 @@ a:link{
 }
 
 /* slider */
-.sliderProductCard{
-  width: 85% !important;
-  height: auto;
-  border-radius: 20px;
-  background-color: #204133;
-}
 
-.sliderProductCard:hover{
-  box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
-  -webkit-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
-  -moz-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
-}
-
-.sliderProductCard button{
-  margin-bottom: 6%;
-}
-
-.sliderProductCard button:hover{
-  background-color: white;
-}
-
-.sliderProductCard img{
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  width: 100%;
-}
-
-.sliderProductCard h3{
-  font-family: 'Roboto', sans-serif;
-  margin-top: 5%;
-  text-align: left;
-  margin-left: 5%;
-}
-
-.sliderProductCard p{
-  font-family: 'Roboto', sans-serif;
-  margin-top: 3%;
-  text-align: left;
-  margin-left: 5%;
-  margin-top: 1%;
-}
-
-.slick-prev:before{
-  color: #2d2d2d;
-}
-
-.slick-next:before{
-  color: #2d2d2d;
-}
-
-.slick-current{
-  width: 9.5% !important;
-  height: 15% !important;
-  margin-left: -1%;
-  margin-right: -1%;
-}
-
-.slick-track{
-  height: auto;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-}
-
-.slick-slide{
-  visibility: hidden!important;
-}
-
-.slick-active{
-  visibility: visible!important;
-}
 
 /* sales */
 .saleItemContainer{
@@ -622,41 +624,53 @@ a:link{
   height: auto;
 }
 
+/* https://unsplash.com/photos/bBiuSdck8tU */
 .saleInfo{
   width: 30%;
   padding: 2%;
   padding-top: 4%;
   padding-Bottom: 4%;
   height: 622px;
-  background-color: #204133;
+  background-image: url('./assets/saleBg.jpg');
+  background-position: center;
+  background-size: cover;
   border-radius: 20px;
   font-family: 'Roboto', sans-serif;
   float: left;
   margin-right: 3%;
 }
 
-.saleInfo button:hover{
-  background-color: #2d2d2d;
-  color: #7B977C;
+.saleInfo button{
+  margin-top: 10%;
+  color: #204133;
 }
 
-.saleInfo h2{
-  margin-bottom: 3%;
+.saleDescription button:hover{
+  background-color: #204133;
+  color: white;
 }
 
-.saleInfo p{
-  margin-bottom: 5%;
-}
-
-.saleImage{
+.saleDescription{
   margin: 0 auto;
-  width: 300px;
-  height: 400px;
-  background-image: url('assets/salePromo.jpg');
-  background-position: center;
-  background-size: cover;
+  margin-top: 17%;
+  width: 70%;
+  padding: 5%;
+  height: 70%;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(16px);
   border-radius: 20px;
   margin-bottom: 5%;
+}
+
+.saleDescription h2{
+  margin-top: 30%;
+  margin-bottom: 10%;
+  color: #204133;
+}
+
+.saleDescription p{
+  margin-bottom: 5%;
+  color: #204133;
 }
 
 /* sale items */
@@ -680,7 +694,7 @@ a:link{
 }
 
 .products{
-  margin-left: 8%;
+  margin-left: 5%;
   height: auto;
   justify-content: inherit;
   display: flex;
@@ -891,19 +905,22 @@ a:link{
 /* --------------------------------------------- */
 /* MANAGE INVENTORY */
 .InventoryManagement{
-  width: 100%;
+  width: 90%;
   height: auto;
   text-align: center;
   position: relative;
+  padding: 5%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .InventoryManagement .products{
+  margin: 0;
+  padding: 2.5%;
+  padding-top: 0;
   width: 60%;
-  margin-left: 0;
-  padding-top: 2%;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
-  float: left;
+  overflow: auto;
 }
 
 .InventoryManagement p{
@@ -929,12 +946,12 @@ a:link{
 }
 
 .EditProduct{
-  margin-top: 50vh;
   width: 30%;
   height: auto;
   margin-left: 5%;
   padding: 3%;
   position: absolute;
+  position: fixed;
   z-index: 2;
   background-color: #7B977C;
   border-radius: 20px;
@@ -968,17 +985,17 @@ a:link{
 
 .AddProduct button{
   background-color: #204133;
-  color: #2d2d2d;
+  color: white;
 }
 
 .EditProduct button{
   background-color: #204133;
-  color: #2d2d2d;
+  color: white;
 }
 
 .AddProduct button:hover{
   background-color: #2d2d2d;
-  color: #7B977C;
+  color: white;
 }
 
 .EditProduct button:hover{
@@ -1004,6 +1021,10 @@ textarea{
   margin-right: 3%;
 }
 
+.discount{
+  width: 15%;
+}
+
 #productDescription{
   width: 70%;
   padding: 1%;
@@ -1017,6 +1038,7 @@ textarea{
   width: 50px;
   margin-right: 1%;
 }
+
 
 label{
   font-family: 'Roboto', sans-serif;

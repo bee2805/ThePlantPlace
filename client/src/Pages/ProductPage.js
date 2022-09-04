@@ -19,6 +19,7 @@ function ProductPage () {
                 productName={item.productName} 
                 productDescription={item.productDescription}
                 price={item.price}
+                discount={item.discount}
                 stock={item.stock}
                 pot1={item.pot1} pot2={item.pot2}
                 pot3={item.pot3}

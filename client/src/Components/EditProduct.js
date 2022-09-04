@@ -17,7 +17,8 @@ function EditProduct (props) {
         pot1: props.pot1, 
         pot2: props.pot2, 
         pot3: props.pot3,
-        pot4: props.pot4
+        pot4: props.pot4,
+        discount: props.discount
     }
 
     const [editValues, setEditValues] = useState(editFormValues);
@@ -67,8 +68,12 @@ function EditProduct (props) {
             <br/>
 
             <textarea name="productDescription" id="productDescription" placeholder="Product Description..." defaultValue={props.productDescription} onChange={updateValues}/>
-
             <br/>
+
+            <label>Do you want to add a discount? (%)</label>
+            <input name="discount" className='discount' id="discount" placeholder={props.discount} type="number" onChange={updateValues}/>
+            <br/>
+
             <button onClick={updateProduct}>Update Product!</button>
         </div>
     )

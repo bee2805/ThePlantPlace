@@ -2,10 +2,12 @@ import React from 'react';
 import MonsteraMinima from "../assets/MonsteraMinima.jpg";
 import monstera from "../assets/monstera.jpg";
 import ScindapsusPictus from "../assets/ScindapsusPictus.jpg";
+import AdminNav from '../Components/AdminNav';
 
 function IncomingOrders () {
     return(
         <>
+        <AdminNav/>
         <div className="IncomingOrders">
             <h1>Incoming Orders</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br/>

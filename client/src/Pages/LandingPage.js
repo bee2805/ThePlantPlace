@@ -6,6 +6,42 @@ import axios from 'axios';
 
 function LandingPage () {
 
+    let discountedItems = [];
+    const [productCard, setProductCard] = useState();
+
+    useEffect(() => {
+
+        axios.get('http://localhost:5000/api/allProducts')
+        .then((res) => {
+            let data = res.data;
+            let URL = 'http://localhost:5000/productImages/';
+
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].discount > 0) {
+                    discountedItems.push(data[i]);
+
+                    let discountedProducts = discountedItems.map((item) => <ProductCard
+                        key={item._id}
+                        productId={item._id}
+                        productName={item.productName} 
+                        productDescription={item.productDescription}
+                        price={item.price}
+                        discount={item.discount}
+                        stock={item.stock}
+                        pot1={item.pot1} pot2={item.pot2}
+                        pot3={item.pot3}
+                        pot4={item.pot4}
+                        image={URL + item.image}
+                        editRender={setProductCard}
+                    />);
+
+                    setProductCard(discountedProducts);
+                };
+            };
+        })
+
+    }, [])
+
     return(
         <>
         <NavBar/>
@@ -46,21 +82,15 @@ function LandingPage () {
 
                 <div className='sales'>
                     <div className='saleInfo'>
-                        <h2>Buy Two,<br/>Get One Free!</h2>
-                        <p>We have an amazing deal for you guys this August.<br/>
-                        If you buy any two small plants, you get one free!<br/>
-                        This applies to all of the plants in store now.
-                        </p>
-                        <div className='saleImage'></div>
-                        <button>Shop Now!</button>
+                        <div className='saleDescription'>
+                            <h2>20% off all<br/>Selected Products!</h2>
+                            <p>We have an amazing deal for you guys this August. Make sure to get 20% off all products marked products! Get your hands on these amazing plants while stocks last.</p>
+                            <a href='/ProductPage'><button>Shop Now!</button></a>
+                        </div>
                     </div>
                     <div className='saleItems'>
-                        <ProductCard/>
-                        <ProductCard/>
-                        <ProductCard/>
-                        <ProductCard/>
-                        <ProductCard/>
-                        <ProductCard/>
+                        {/* {renderProducts} */}
+                        {productCard}
                     </div>
                 </div>
             </div>{/* new to store */}

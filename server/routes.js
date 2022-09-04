@@ -32,8 +32,9 @@ router.post('/api/newProduct', uploadProductImage.single('image'), (req, res) =>
         productName: data.productName,
         price: data.price,
         productDescription: data.productDescription,
-        // date: { type: Date, default: Date.now },
+        date: data.date,
         stock:data.stock,
+        discount: data.discount,
         variations: {
             pot1: data.variations.pot1, 
             pot2:data.variations.pot2, 
@@ -73,8 +74,9 @@ router.patch('/api/updateProduct/:id', async (req, res) => {
             productName: req.body.productName,
             price: req.body.price,
             productDescription: req.body.productDescription,
-            // date: { type: Date, default: Date.now },
+            date: req.body.date,
             stock:req.body.stock,
+            discount: req.body.discount,
             variations: {
                 pot1: req.body.pot1, 
                 pot2:req.body.pot2, 

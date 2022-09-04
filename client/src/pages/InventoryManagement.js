@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import EditProductCard from '../Components/EditProductCard';
+import AdminNav from '../Components/AdminNav';
 
 function InventoryManagement () {
 
     const productName = useRef(),
     productDescription = useRef(),
     price = useRef(),
-    stock = useRef(),
     pot1 = useRef(),
     pot2 = useRef(),
     pot3 = useRef(),
@@ -41,6 +41,7 @@ function InventoryManagement () {
         axios.get('http://localhost:5000/api/allProducts')
         .then(res => {
             let productData = res.data;
+            console.log(productData)
             let URL = 'http://localhost:5000/productImages/';
             let renderProducts = productData.map((item) => <EditProductCard
                 key={item._id} 
@@ -48,7 +49,8 @@ function InventoryManagement () {
                 productName={item.productName} 
                 productDescription={item.productDescription}
                 price={item.price}
-                stock={item.variations.stock}
+                stock={item.stock}
+                discount={item.discount}
                 pot1={item.variations.pot1}
                 pot2={item.variations.pot2}
                 pot3={item.variations.pot3}
@@ -97,50 +99,51 @@ function InventoryManagement () {
         document.getElementById('pot2').value = "";
         document.getElementById('pot3').value = "";
         document.getElementById('pot4').value = "";
+        document.getElementById('prev_img').src = "";
     }
 
     return(
         <>
+        <AdminNav/>
         <div className="InventoryManagement">
-            <div className='products overflow'>
+        <div className='AddProduct'>
+            <h2>Add a product!</h2>
+                <form>
+                    <div className="imgArea">
+                        <div className="product_img"><img id='prev_img'></img></div>
+                        <p>{imageName}</p>
+                        <input name="imageUrl" id="imgInput" className="imgInput" type="file" onChange={getImage}/>
+                    </div>
+                    <input id="productName" placeholder="Product Name..." type="text" ref={productName}/>
+                    <input id="price" placeholder="Price" type="number" ref={price}/>
+
+                    <br/>
+
+                    <label>Pot One</label>
+                    <input className='qty' id="pot1" placeholder="qty" type="number" ref={pot1}/>
+                    <br/>
+
+                    <label>Pot Two</label>
+                    <input className='qty' id="pot2" placeholder="qty" type="number" ref={pot2}/>
+                    <br/>
+
+                    <label>Pot Three</label>
+                    <input className='qty' id="pot3" placeholder="qty" type="number" ref={pot3}/>
+                    <br/>
+
+                    <label>Pot Four</label>
+                    <input className='qty' id="pot4" placeholder="qty" type="number" ref={pot4}/>
+                    <br/>
+
+                    <textarea id="productDescription" placeholder="Product Description..." ref={productDescription}/>
+
+                    <br/>
+                    <button onClick={addProduct}>Add Product!</button>
+                </form>
+            </div>
+            <div className='products'>
                 {products}
             </div>
-        </div>
-
-        <div className="AddProduct">
-            <h2>Add a product!</h2>
-            <form>
-                <div className="imgArea">
-                    <div className="product_img"><img id='prev_img'></img></div>
-                    <p>{imageName}</p>
-                    <input name="imageUrl" id="imgInput" className="imgInput" type="file" onChange={getImage}/>
-                </div>
-                <input id="productName" placeholder="Product Name..." type="text" ref={productName}/>
-                <input id="price" placeholder="Price" type="number" ref={price}/>
-
-                <br/>
-
-                <label>Pot One</label>
-                <input className='qty' id="pot1" placeholder="qty" type="number" ref={pot1}/>
-                <br/>
-
-                <label>Pot Two</label>
-                <input className='qty' id="pot2" placeholder="qty" type="number" ref={pot2}/>
-                <br/>
-
-                <label>Pot Three</label>
-                <input className='qty' id="pot3" placeholder="qty" type="number" ref={pot3}/>
-                <br/>
-
-                <label>Pot Four</label>
-                <input className='qty' id="pot4" placeholder="qty" type="number" ref={pot4}/>
-                <br/>
-
-                <textarea id="productDescription" placeholder="Product Description..." ref={productDescription}/>
-
-                <br/>
-                <button onClick={addProduct}>Add Product!</button>
-            </form>
         </div>
         </>
     )

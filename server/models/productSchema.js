@@ -4,8 +4,9 @@ const productSchema = mongoose.Schema({
     productName: { type: String, required: true },
     price: { type: Number, required: true},
     productDescription: { type: String, required: true },
-    // date: { type: Date, default: Date.now },
+    date: { type: Date, default: Date.now },
     stock:{ type: Number, required: true },
+    discount: {type: Number},
     variations: {
         pot1:{ type: Number, required: true }, 
         pot2:{ type: Number, required: true }, 

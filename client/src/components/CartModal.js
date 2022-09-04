@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import CartItem from "./CartItem";
+import CartItem from "./SubComponents/CartItem";
 
 function CartModal (props) {
 
