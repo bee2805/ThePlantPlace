@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ProductSlider from '../Components/ProductSlider';
 import ProductCard from '../Components/ProductCard';
 import NavBar from '../Components/NavBar';
+import axios from 'axios';
 
 function LandingPage () {
+
     return(
         <>
         <NavBar/>

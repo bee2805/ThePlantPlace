@@ -16,7 +16,29 @@ function LoginModal (props) {
 
     const submit = (e) => {
         e.preventDefault()
-        console.table(userValues);
+        
+        let payload = {
+            email: userValues['email'],
+            password: userValues['password']
+        }
+
+        axios.post('http://localhost:5000/api/loginUser', payload)
+        .then((res) => {
+            if(!res.data){
+                alert("User nor found");
+            } else {
+                if(res.data.user){
+                    alert("welcome");
+                    sessionStorage.setItem('token', res.data.user)
+                    closeModal()
+                } else {
+                    alert("User not found");
+                }
+            }
+        })
+        .catch(function(error){
+            console.log(error)
+        })
     }
 
     return(

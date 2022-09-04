@@ -10,6 +10,8 @@ app.use(cors({
     origin: 'http://localhost:3000'
 }));
 
+app.use('/productImages', express.static("productImages"));
+
 // using body parser middleware
 // wont be able to request body without this
 app.use(express.json());

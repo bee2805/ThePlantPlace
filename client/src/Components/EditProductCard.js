@@ -38,7 +38,7 @@ function EditProductCard (props) {
         <>
         {editProductModal}
         <div className="EditProductCard">
-            <img src={monsteraMinima} alt="img"/>
+            <img src={props.image} alt="img"/>
             <div className="cardInfo">
                 <p className="productName">{props.productName}</p>
 

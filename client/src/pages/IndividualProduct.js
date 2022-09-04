@@ -2,22 +2,17 @@ import React, { useState, useEffect, useRef } from 'react';
 import {useNavigate} from "react-router-dom"
 import axios from 'axios';
 import NavBar from '../Components/NavBar';
-import CartItem from '../Components/CartItem';
 import LoginModal from '../Components/LoginModal';
-import CartModal from '../Components/CartModal';
 
 function IndividualProduct () {
 
     let productId = sessionStorage.getItem('productId');
-    console.log(productId)
+    const [imgUrl, setImgUrl] = useState()
 
     let navigate = useNavigate();
-
     const quantity = useRef();
 
-    const [renderCartItem, setRenderCartItem] = useState();
     const [loginModal, setLoginModal] = useState();
-    const [cartModal, setCartModal] = useState();
 
     const [ productData, setProductData] = useState({
         productName: "",
@@ -46,30 +41,64 @@ function IndividualProduct () {
                 pot3: data.variations.pot3,
                 pot4: data.variations.pot4
             })
+            let URL = 'http://localhost:5000/productImages/' + data.image;
+            setImgUrl(URL);
         });
     },[]);
 
     const back = () => {
-        sessionStorage.clear('productId');
+        sessionStorage.removeItem('productId');
         navigate("/ProductPage");
     }
 
     const addToCart = () => {
-        if(sessionStorage.getItem('username') === ""){
+        let cart = sessionStorage.getItem('cart')
+        let user = sessionStorage.getItem('token')
+
+        if(user === '' || user === null){
+            alert('Please login first.')
             setLoginModal(<LoginModal rerender={setLoginModal}/>);
         } else {
-            setCartModal(<CartModal rerender={setCartModal}/>);
+            let cartArray = [];
+
+            if(cart === '' || cart === null){
+                let addProductToCart = {
+                    cartItem: {
+                        name: productData.productName,
+                        img: imgUrl,
+                        price: productData.price,
+                        id: productId,
+                        qty: 1,
+                    }
+                }
+
+                cartArray.push(addProductToCart);
+                sessionStorage.setItem('cart', JSON.stringify(cartArray));
+
+            } else {
+                let cart = JSON.parse(sessionStorage.getItem('cart'));
+
+                let addProductToCart = {
+                    name: productData.productName,
+                    img: imgUrl,
+                    price: productData.price,
+                    id: productId,
+                    qty: 1,
+                }
+
+                cartArray.push(addProductToCart);
+                sessionStorage.setItem('cart', JSON.stringify(cartArray));
+            }
         }
     }
 
     return(
         <>
         {loginModal}
-        {cartModal}
         <NavBar/>
         <div className="IndividualProduct">
             <div className="back" onClick={back}></div>
-            <div className="productImage"></div>
+            <div className="productImage"><img src={imgUrl}/></div>
             <div className="productInfo">
                 <h1>{productData.productName}</h1>
                 <p>{productData.productDescription}</p>

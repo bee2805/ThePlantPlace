@@ -16,11 +16,32 @@ function InventoryManagement () {
     const [products, setProducts] = useState();
     const [renderProducts, setRenderProducts] = useState(false);
 
+    const [imageName, setImageName] = useState("Please upload an image");
+    const [productImage, setProductImage] = useState();
+
+    const getImage = (e) =>{
+
+        let imageFile = e.target.files[0];
+        setProductImage(imageFile);
+
+        let value = e.target.value;
+        let imageName = value.substring(12);
+        setImageName(imageName);
+
+        let reader = new FileReader();
+        reader.onload = () => {
+            let output = document.getElementById('prev_img');
+            output.src = reader.result;
+        }
+
+        reader.readAsDataURL(e.target.files[0]);
+    }
+
     useEffect(() => {
         axios.get('http://localhost:5000/api/allProducts')
         .then(res => {
             let productData = res.data;
-            console.log(productData)
+            let URL = 'http://localhost:5000/productImages/';
             let renderProducts = productData.map((item) => <EditProductCard
                 key={item._id} 
                 productId={item._id}
@@ -32,6 +53,7 @@ function InventoryManagement () {
                 pot2={item.variations.pot2}
                 pot3={item.variations.pot3}
                 pot4={item.variations.pot4}
+                image={URL + item.image}
                 editRender={setRenderProducts}
             />)
 
@@ -41,7 +63,11 @@ function InventoryManagement () {
         .catch(err => console.log(err));
     }, [renderProducts])
 
-    const addProduct = () => {
+    const addProduct = (e) => {
+        e.preventDefault()
+
+        const payloadData = new FormData();
+
         let stock = pot1.current.value + pot2.current.value + pot3.current.value;
 
         let payload = {
@@ -51,14 +77,17 @@ function InventoryManagement () {
             // date: { type: Date, default: Date.now },
             stock: stock,
             variations: {
-                pot1: +pot1.current.value, 
-                pot2: +pot2.current.value, 
+                pot1: +pot1.current.value,
+                pot2: +pot2.current.value,
                 pot3: +pot3.current.value,
                 pot4: +pot4.current.value
             }
         }
 
-        axios.post('http://localhost:5000/api/newProduct', payload)
+        payloadData.append("information", JSON.stringify(payload));
+        payloadData.append("image", productImage);
+
+        axios.post('http://localhost:5000/api/newProduct', payloadData)
         setRenderProducts(true)
 
         document.getElementById('productName').value = "";
@@ -80,31 +109,38 @@ function InventoryManagement () {
 
         <div className="AddProduct">
             <h2>Add a product!</h2>
-            <input id="productName" placeholder="Product Name..." type="text" ref={productName}/>
-            <input id="price" placeholder="Price" type="number" ref={price}/>
+            <form>
+                <div className="imgArea">
+                    <div className="product_img"><img id='prev_img'></img></div>
+                    <p>{imageName}</p>
+                    <input name="imageUrl" id="imgInput" className="imgInput" type="file" onChange={getImage}/>
+                </div>
+                <input id="productName" placeholder="Product Name..." type="text" ref={productName}/>
+                <input id="price" placeholder="Price" type="number" ref={price}/>
 
-            <br/>
+                <br/>
 
-            <label>Pot One</label>
-            <input className='qty' id="pot1" placeholder="qty" type="number" ref={pot1}/>
-            <br/>
+                <label>Pot One</label>
+                <input className='qty' id="pot1" placeholder="qty" type="number" ref={pot1}/>
+                <br/>
 
-            <label>Pot Two</label>
-            <input className='qty' id="pot2" placeholder="qty" type="number" ref={pot2}/>
-            <br/>
+                <label>Pot Two</label>
+                <input className='qty' id="pot2" placeholder="qty" type="number" ref={pot2}/>
+                <br/>
 
-            <label>Pot Three</label>
-            <input className='qty' id="pot3" placeholder="qty" type="number" ref={pot3}/>
-            <br/>
+                <label>Pot Three</label>
+                <input className='qty' id="pot3" placeholder="qty" type="number" ref={pot3}/>
+                <br/>
 
-            <label>Pot Four</label>
-            <input className='qty' id="pot4" placeholder="qty" type="number" ref={pot4}/>
-            <br/>
+                <label>Pot Four</label>
+                <input className='qty' id="pot4" placeholder="qty" type="number" ref={pot4}/>
+                <br/>
 
-            <textarea id="productDescription" placeholder="Product Description..." ref={productDescription}/>
+                <textarea id="productDescription" placeholder="Product Description..." ref={productDescription}/>
 
-            <br/>
-            <button onClick={addProduct}>Add Product!</button>
+                <br/>
+                <button onClick={addProduct}>Add Product!</button>
+            </form>
         </div>
         </>
     )

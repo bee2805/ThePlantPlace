@@ -12,6 +12,7 @@ function ProductPage () {
         axios.get('http://localhost:5000/api/allProducts')
         .then(res => {
             let productData = res.data;
+            let URL = 'http://localhost:5000/productImages/';
             // console.table(productData)
             let renderProducts = productData.map((item) => <ProductCard
                 key={item._id} productId={item._id}
@@ -22,6 +23,7 @@ function ProductPage () {
                 pot1={item.pot1} pot2={item.pot2}
                 pot3={item.pot3}
                 pot4={item.pot4}
+                image={URL + item.image}
                 editRender={setRenderProducts}
             />)
 

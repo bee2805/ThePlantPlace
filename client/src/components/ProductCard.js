@@ -14,12 +14,11 @@ function ProductCard (props) {
     return(
         <>
             <div className="productCard" onClick={viewProduct}>
-                <img src={monstera} alt="img"/>
+                <img src={props.image}/>
                 <div className="cardInfo">
-                    <p className="productName">{props.productName}</p>
+                    <h2 className="productName">{props.productName}</h2>
                     <p><strong>R </strong>{props.price}</p>
                 </div>
-                <div className="prodCart"></div>
             </div>
         </>
     );

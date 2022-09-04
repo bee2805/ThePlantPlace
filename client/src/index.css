@@ -40,14 +40,12 @@ input{
   margin-bottom: 3%;
   border-radius: 20px;
   padding: 10px 30px;
-  border: 2px solid #67734B;
+  border: 2px solid #204133;
   outline: none;
 }
 
 button{
   padding: 10px 30px;
-  background-color: #99A278;
-  color: #2d2d2d;
   border-radius: 20px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
@@ -55,13 +53,8 @@ button{
   cursor: pointer;
 }
 
-button:hover{
-  background-color: #67734B;
-  color: #2d2d2d;
-}
-
 .overflow{
-  overflow: auto;
+  overflow-y: scroll;
 }
 
 /* --------------------------------------------- */
@@ -90,12 +83,12 @@ button:hover{
 .NavItems p{
   margin-top: 15%;
   margin-right: 25px;
-  color: #99A278;
+  color: #7B977C;
   cursor: pointer;
 }
 
 .NavBar p{
-  color: #99A278;
+  color: #7B977C;
 }
 
 .login{
@@ -106,12 +99,12 @@ button:hover{
 }
 
 .login:hover{
-  color: #67734B;
+  color: #204133;
 }
 
 .NavItems p:hover{
   margin-right: 25px;
-  color: #67734B;
+  color: #204133;
 }
 
 a:link{
@@ -120,7 +113,7 @@ a:link{
 
 .NavItems a.active p{
   font-weight: bold;
-  color: #67734B;
+  color: #204133;
   font-size: medium;
 }
 
@@ -175,13 +168,20 @@ a:link{
 .productCard, .EditProductCard{
   width: 225px;
   height: fit-content;
-  background-color: #67734B;
+  background-color: #204133;
   float: left;
   border-radius: 20px;
   margin-left: 2% !important;
   margin-right: 2% !important;
   margin-bottom: 4%;
   cursor: pointer;
+  box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
+  -webkit-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
+  -moz-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
+}
+
+.productCard h2{
+  color: white;
 }
 
 .EditProductCard{
@@ -215,9 +215,10 @@ a:link{
 }
 
 .productCard:hover{
-  box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
-  -webkit-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
-  -moz-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 4px solid #204133;
 }
 
 .EditProductCard:hover{
@@ -250,7 +251,7 @@ a:link{
   width: 150px;
   float: left;
   background-color: #2d2d2d;
-  color: #99A278;
+  color: #7B977C;
 }
 
 .productName{
@@ -291,7 +292,7 @@ a:link{
   margin-top: 15%;
   height: auto;
   padding: 3%;
-  background-color: #99A278;
+  background-color: #7B977C;
   position: absolute;
   position: fixed;
   z-index: 2;
@@ -310,7 +311,7 @@ a:link{
   margin-top: 15%;
   height: auto;
   padding: 3%;
-  background-color: #99A278;
+  background-color: #7B977C;
   position: absolute;
   position: fixed;
   z-index: 2;
@@ -330,37 +331,37 @@ a:link{
 
 .LoginModal button{
   margin-bottom: 1%;
-  background-color: #67734B;
+  background-color: #204133;
   color: #2d2d2d;
 }
 
 .LoginModal p {
-  color: #67734B;
+  color: #204133;
   font-style: italic;
-  text-decoration: underline 1px solid #67734B;
+  text-decoration: underline 1px solid #204133;
   cursor: pointer;
 }
 
 .RegisterModal p {
-  color: #67734B;
+  color: #204133;
   font-style: italic;
-  text-decoration: underline 1px solid #67734B;
+  text-decoration: underline 1px solid #204133;
   cursor: pointer;
 }
 
 .RegisterModal button{
-  background-color: #67734B;
+  background-color: #204133;
   color: #2d2d2d;
 }
 
 .LoginModal button:hover{
   background-color: #2d2d2d;
-  color: #99A278;
+  color: #7B977C;
 }
 
 .RegisterModal button:hover{
   background-color: #2d2d2d;
-  color: #99A278;
+  color: #7B977C;
 }
 
 /* @keyframes fadeOut {
@@ -385,7 +386,7 @@ a:link{
   width: 20%;
   height: auto;
   padding: 2%;
-  background-color: #99A278;
+  background-color: #7B977C;
   box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
   -webkit-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
   -moz-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
@@ -415,14 +416,14 @@ a:link{
 .CartModal button{
   margin-top: 5%;
   width: 100%;
-  background-color: #67734B;
+  background-color: #204133;
   color: #2d2d2d;
 }
 
 .CartModal button:hover{
   margin-top: 5%;
   width: 100%;
-  color: #67734B;
+  color: #204133;
   background-color: #2d2d2d;
 }
 
@@ -460,7 +461,7 @@ a:link{
 
 .cartItem{
   height: 120px;
-  border-bottom: 2px solid #67734B;
+  border-bottom: 2px solid #204133;
 }
 
 .itemInfo{
@@ -532,7 +533,7 @@ a:link{
   width: 85% !important;
   height: auto;
   border-radius: 20px;
-  background-color: #67734B;
+  background-color: #204133;
 }
 
 .sliderProductCard:hover{
@@ -627,7 +628,7 @@ a:link{
   padding-top: 4%;
   padding-Bottom: 4%;
   height: 622px;
-  background-color: #67734B;
+  background-color: #204133;
   border-radius: 20px;
   font-family: 'Roboto', sans-serif;
   float: left;
@@ -636,7 +637,7 @@ a:link{
 
 .saleInfo button:hover{
   background-color: #2d2d2d;
-  color: #99A278;
+  color: #7B977C;
 }
 
 .saleInfo h2{
@@ -679,9 +680,12 @@ a:link{
 }
 
 .products{
-  justify-content: center;
+  margin-left: 8%;
+  height: auto;
+  justify-content: inherit;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .products a{
@@ -708,6 +712,11 @@ a:link{
   float: left;
   margin-right: 5%;
   margin-bottom: 5%;
+  border-radius: 20px;
+}
+
+.productImage img {
+  width: 100%;
   border-radius: 20px;
 }
 
@@ -815,7 +824,7 @@ a:link{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border: 3px solid #67734B;
+  border: 3px solid #204133;
   box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
   -webkit-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
   -moz-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
@@ -825,7 +834,7 @@ a:link{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border: 3px solid #67734B;
+  border: 3px solid #204133;
   box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
   -webkit-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
   -moz-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
@@ -835,7 +844,7 @@ a:link{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border: 3px solid #67734B;
+  border: 3px solid #204133;
   box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
   -webkit-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
   -moz-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
@@ -845,7 +854,7 @@ a:link{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border: 3px solid #67734B;
+  border: 3px solid #204133;
   box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
   -webkit-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
   -moz-box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
@@ -855,28 +864,28 @@ a:link{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border: 3px solid #67734B;
+  border: 3px solid #204133;
 }
 
 .pot2:focus{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border: 3px solid #67734B;
+  border: 3px solid #204133;
 }
 
 .pot3:focus{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border: 3px solid #67734B;
+  border: 3px solid #204133;
 }
 
 .pot4:focus{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border: 3px solid #67734B;
+  border: 3px solid #204133;
 }
 
 /* --------------------------------------------- */
@@ -889,10 +898,11 @@ a:link{
 }
 
 .InventoryManagement .products{
-  width: 55%;
+  width: 60%;
+  margin-left: 0;
   padding-top: 2%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
   float: left;
 }
 
@@ -906,7 +916,7 @@ a:link{
   float: left;
   height: 80vh;
   padding: 5%;
-  background-color: #99A278;
+  background-color: #7B977C;
   border-radius: 20px;
   text-align: center;
   box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
@@ -926,7 +936,7 @@ a:link{
   padding: 3%;
   position: absolute;
   z-index: 2;
-  background-color: #99A278;
+  background-color: #7B977C;
   border-radius: 20px;
   text-align: center;
   box-shadow: 8px 8px 10px -8px rgba(0,0,0,0.55);
@@ -957,23 +967,23 @@ a:link{
 }
 
 .AddProduct button{
-  background-color: #67734B;
+  background-color: #204133;
   color: #2d2d2d;
 }
 
 .EditProduct button{
-  background-color: #67734B;
+  background-color: #204133;
   color: #2d2d2d;
 }
 
 .AddProduct button:hover{
   background-color: #2d2d2d;
-  color: #99A278;
+  color: #7B977C;
 }
 
 .EditProduct button:hover{
   background-color: #2d2d2d;
-  color: #99A278;
+  color: #7B977C;
 }
 
 .AddProduct .close{
@@ -998,7 +1008,7 @@ textarea{
   width: 70%;
   padding: 1%;
   outline: none;
-  border: #67734B 2px solid;
+  border: #204133 2px solid;
   border-radius: 20px;
   margin-bottom: 3%;
 }
@@ -1010,7 +1020,6 @@ textarea{
 
 label{
   font-family: 'Roboto', sans-serif;
-  font-weight: bold;
   margin-right: 3%;
 }
 
@@ -1039,7 +1048,7 @@ label{
 .tableHeadings p{
   font-size: large;
   font-weight: bold;
-  color: #67734B
+  color: #204133
 }
 
 .orderItem{
@@ -1051,7 +1060,7 @@ label{
   align-items: center;
   padding-top: 1%;
   padding-bottom: 1%;
-  background-color: #99A278;
+  background-color: #7B977C;
   margin-bottom: 1.5%;
   border-radius: 20px;
 }
@@ -1067,11 +1076,11 @@ label{
 }
 
 .orderItem button{
-  background-color: #67734B;
+  background-color: #204133;
 }
 
 .orderItem button:hover{
-  color: #99A278;
+  color: #7B977C;
   background-color: #2d2d2d;
 }
 
@@ -1140,4 +1149,63 @@ label{
   width: 35px;
   height: 35px;
   background-image: url('assets/icons/phone-call-hover.svg');
+}
+
+input[type="file"]{
+  border: transparent;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  font-family: 'Open Sans', sans-serif;
+  color: transparent;
+  float: left;
+  background-color: transparent;
+}
+
+::-webkit-file-upload-button{
+  width: 50%;
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  padding: 4%;
+  border-radius: 20px;
+  color: white;
+  background-color: #204133;
+  margin-bottom: 10%;
+  margin-top: 5%;
+  cursor: pointer;
+}
+
+
+.imgArea p{
+  padding-top: 1%;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #2d2d2d;
+  text-align: left;
+}
+
+.imgArea{
+  width: 100%;
+  height: 10vh;
+  margin-left: 15%;
+}
+
+.product_img{
+  width: 80px;
+  height: 80px;
+  float: left;
+  margin-right: 3%;
+  border-radius: 10%;
+  margin-left: 5%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: #204133 3px solid;
+}
+
+.product_img img{
+  width: 100%;
+  height: auto;
 }

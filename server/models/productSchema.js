@@ -11,7 +11,8 @@ const productSchema = mongoose.Schema({
         pot2:{ type: Number, required: true }, 
         pot3:{ type: Number, required: true },
         pot4:{ type: Number, required: true }
-    }
+    },
+    image: {type: String, required: true}
 }); //END OF PRODUCT SCHEMA
 
 // EXPORT MODULES
