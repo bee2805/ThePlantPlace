@@ -17,13 +17,13 @@
 <p align="center">
 
   <a href="https://github.com/bee2805/ThePlantPlace">
-    <img src="README_assets/logo.jpg" alt="Logo" width="140" height="140">
+    <img src="README_assets/logo.png" alt="Logo" width="140" height="140">
   </a>
   
-  <h3 align="center">OK Boomer</h3>
+  <h3 align="center">The Plant Place</h3>
 
   <p align="center">
-    In light of the quiz craze that arose during the Covid19 Pandemic, I decided to create a trivia app that would bring together individuals from different backgrounds.  The OK Boomer mobile game was designed and built using Kotlin and Android Studio. This App was inspired by the OK Boomer Card Game.<br>
+    The Plant Place is a mock e-commerse store built using the MERN stack. Since house plants have recenly become super trendy, I decided to create on online store that sells indoor plants that comes with a pot of the clients choice, included in the price.<br>
     
    <br />
    <br />
@@ -47,7 +47,6 @@
 * [Concept Process](#concept-process)
    * [Ideation](#ideation)
    * [Wireframes](#wireframes)
-   * [Custom UI](#user-flow)
 * [Development Process](#development-process)
    * [Implementation Process](#implementation-process)
         * [Highlights](#highlights)
@@ -64,66 +63,78 @@
 <!--PROJECT DESCRIPTION-->
 ## About the Project
 <!-- header image of project -->
-![image1](https://github.com/bee2805/ThePlantPlace/blob/main/app/src/main/res/drawable/cover_photo.jpg)
+![image1](https://github.com/bee2805/ThePlantPlace/blob/main/README_assets/logo.jpg)
 
 ### Project Description
 
-Welcome to the OK Boomer mobile trivia application! It is no secret that each generation thinks they’re better than the next, so, this game was designed to put that to the test!
+The Plant Place is an e-commerse store that sells all your favorite house plants! When it comes to affordability, The Plant Place has you covered! With each plant comes a beautiful ceramic pot of your choice included in the price!
 
 ### Built With
 
-* [Android Studio](https://developer.android.com/studio?gclid=CjwKCAjw3qGYBhBSEiwAcnTRLudtJ2FIlpZp7wRlpahXN_ZNMtz229FDIOG7RtDaLKjgrbFTDy7y5hoCzcYQAvD_BwE&gclsrc=aw.ds)
-* [Kotlin](https://kotlinlang.org/)
-* XML
+* [MongoDb](https://www.mongodb.com/cloud/atlas/lp/try4?utm_source=google&utm_campaign=gs_emea_south_africa_search_core_brand_atlas_desktop&utm_term=mongodb%20sign%20in&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=12212624560&adgroup=115749711783&gclid=CjwKCAjwvNaYBhA3EiwACgndgoPwY5WQ5R9Y8UD_MEdENhbITxJjpuwMdeHTzX8FQhjOcoruVejKjBoCNLkQAvD_BwE)
+* [Express.js](https://expressjs.com/)
+* [React](https://reactjs.org/docs/getting-started.html)
+* [Node.js](https://nodejs.org/en/)
+* [Axios](https://axios-http.com/docs/intro)
 
 <!-- GETTING STARTED -->
 <!-- Make sure to add appropriate information about what prerequesite technologies the user would need and also the steps to install your project on their own mashines -->
 ## Getting Started
 
-The following instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-### How to install
+To get a copied file of this repository, follow the steps below to get it installed on your local machine. 
 
 ### Prerequisites
-Ensure that you have GitHub desktop and Android Studio downloaded onto your machine.
+
+Ensure that you have the latest version of [NPM](https://www.npmjs.com/) installed on your machine. The [GitHub Desktop](https://desktop.github.com/) program will also be required.
+
+### How to install
 
 ### Installation
 Here are a couple of ways to clone this repo:
 
 1. GitHub Desktop </br>
-Enter `https://github.com/bee2805/ThePlantPlace.git` into the URL field and press the `Clone` button.
+Enter `https://github.com/LeandervanAarde/fikaclothing.git` into the URL field and press the `Clone` button.
 
 2. Clone Repository </br>
 Run the following in the command-line to clone the project:
    ```sh
-   git clone https://github.com/bee2805/ThePlantPlace.git
+   git clone https://github.com/LeandervanAarde/fikaclothing.git
    ```
     Open `Software` and select `File | Open...` from the menu. Select cloned directory and press `Open` button
 
+3. Install Dependencies </br>
+Run the following in the command-line to install all the required dependencies:
+   ```sh
+   npm install / npm i
+   ```
+
+5. Ensure that you have a MongoDB database
+
+6. Ensure that Nodemon, Express and Mongo are installed as dependancies   </br>
+
+7. To start the back end run the following in your terminal</br>
+   ```sh
+   npm run dev 
+   ```
 
 <!-- FEATURES AND FUNCTIONALITY-->
 <!-- You can add the links to all of your imagery at the bottom of the file as references -->
 ## Features and Functionality
 
-### Splash Screen
-
-I implemented a splash screen that displays as soon as the application is opened by the user. It is active for 3 and thereafter the user will be directed to the home page where they will need to add their username.
-
+### See all the newest products and items on sale! 
+On the landing page, the user is presented information about the store. New products are presented in a slider and at the bottom of the page, all the sale items are displayed.
 ![image2](https://github.com/bee2805/ThePlantPlace/blob/main/app/src/main/res/drawable/splash_screen.jpg)
-### Categories
 
-The user can choose between different categories that they would like to play.
-
+### Browse Through Products
+The product page displays all the products that are available in the store by reading the products from the database and displaying them dynamically on the site.
 ![image3](https://github.com/bee2805/ThePlantPlace/blob/main/app/src/main/res/drawable/categories.jpg)
-### Questions
 
-There are three different views for each question type. Two of the question types have three options in which you can pick and the lyric-based question view allows users to answer by typing in the answer. As the user plays each category, points will accumulate for each correct answer.
-
+### Inventory Management
+The admin profile will be able to manage the stock available on the e-commerse store. This includes adding, removing and altering information such as price, qty of the product. They will aso be able to put certain products on sale.
 ![image4](https://github.com/bee2805/ThePlantPlace/blob/main/app/src/main/res/drawable/question_screen.jpg)
-### Results/Scores
 
-The result screen displays after a user have completed a category. The score from the specific Category played is displayed here.
-
+### Order Processing
+This page showcases incoming orders that are made by the users. The orders include information about the order as well as a dispatch button that removes it from the database.
 ![image5](https://github.com/bee2805/ThePlantPlace/blob/main/app/src/main/res/drawable/results.jpg)
 
 
@@ -131,21 +142,14 @@ The result screen displays after a user have completed a category. The score fro
 <!-- Briefly explain your concept ideation process -->
 <!-- here you will add things like wireframing, data structure planning, anything that shows your process. You need to include images-->
 ## Concept Process
-
-* I thought about the goals that I wanted to achieve with this app. The main goal was definitely to create an app that brings people together, so I jotted down a few ideas that could achieve this goal. The first ideas I got were either not exciting enough, or they were interest-specific. 
-* After bashing ideas around my brain, I finally conclude that a generation quiz would not only be super fun and inclusive, but would also bring on that nostalgia feeling, and I think we can all admit that it’s a great feeling to have!
-* I then decided on the categories that I wanted to include and after some amazing advice, I added an extra category that tells you which generation your soul belongs to!
-
-After setting this up, I went ahead and did some research on different trivia games or apps to get a bit of inspiration for the brand and layout of the app. It was then that I ran into this amazing card game called OK boomer on Behance. After completely falling in love with this whole idea as well as the branding, I mean, how could you not?!!! I got inspired and decided to base my app on this card game.
-
 ### Ideation
 
-![image6](https://github.com/bee2805/ThePlantPlace/blob/main/app/src/main/res/drawable/concept_ideation.jpg)
+![image6](https://github.com/bee2805/ThePlantPlace/blob/main/README_assets/concept_ideation.jpg)
 <br>
 
 ### Wireframes
 
-![image7](https://github.com/bee2805/ThePlantPlace/blob/main/app/src/main/res/drawable/wireframes.jpg)
+![image7](https://github.com/bee2805/ThePlantPlace/blob/main/README_assets/Wireframes.jpg)
 
 <!-- DEVELOPMENT PROCESS -->
 ## Development Process
