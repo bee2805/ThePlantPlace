@@ -123,7 +123,7 @@ Run the following in the command-line to install all the required dependencies:
 
 ### See all the newest products and items on sale! 
 On the landing page, the user is presented information about the store. New products are presented in a slider and at the bottom of the page, all the sale items are displayed.
-![image2](https://github.com/bee2805/ThePlantPlace/blob/main/app/src/main/res/drawable/splash_screen.jpg)
+![image2](https://github.com/bee2805/ThePlantPlace/blob/main/README_assets/home_feature.jpg)
 
 ### Browse Through Products
 The product page displays all the products that are available in the store by reading the products from the database and displaying them dynamically on the site.
@@ -238,4 +238,4 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 * [3D slider](https://github.com/chrisdesilva/3d-slider)
 * [Sale info Image](https://unsplash.com/photos/bBiuSdck8tU)
 * [Header Image](https://unsplash.com/photos/W5XTTLpk1-I)
-* [Features Mockup](https://www.pixeden.com/psd-mock-up-templates/psd-pro-display-xdr-mockup)
+* [Landing Page features Mockup](https://www.creativefabrica.com/product/free-website-mockup/ref/235640/)
