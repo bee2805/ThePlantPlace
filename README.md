@@ -238,3 +238,4 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 * [3D slider](https://github.com/chrisdesilva/3d-slider)
 * [Sale info Image](https://unsplash.com/photos/bBiuSdck8tU)
 * [Header Image](https://unsplash.com/photos/W5XTTLpk1-I)
+* [Features Mockup](https://www.pixeden.com/psd-mock-up-templates/psd-pro-display-xdr-mockup)
