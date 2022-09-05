@@ -17,7 +17,7 @@
 <p align="center">
 
   <a href="https://github.com/bee2805/ThePlantPlace">
-    <img src="README_assets/logo.png" alt="Logo" width="140" height="140">
+    <img src="README_assets/logo.png" alt="Logo" width="300" height="300">
   </a>
   
   <h3 align="center">The Plant Place</h3>
