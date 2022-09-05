@@ -137,7 +137,7 @@ The admin profile will be able to manage the stock available on the e-commerse s
 
 ### Order Processing
 This page showcases incoming orders that are made by the users. The orders include information about the order as well as a dispatch button that removes it from the database.
-![image5](https://github.com/bee2805/ThePlantPlace/blob/main/app/src/main/res/drawable/results.jpg)
+![image5](https://github.com/bee2805/ThePlantPlace/blob/main/README_assets/order_processing.jpg)
 
 
 <!-- CONCEPT PROCESS -->
@@ -242,3 +242,4 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 * [Header Image](https://unsplash.com/photos/W5XTTLpk1-I)
 * [Landing Page features Mockup](https://www.creativefabrica.com/product/free-website-mockup/ref/235640/)
 * [The rest of the feature Mockups](https://www.mockupworld.co/free/website-presentation-showcase-mockup/)
+*
