@@ -123,6 +123,7 @@ Run the following in the command-line to install all the required dependencies:
 
 ### See all the newest products and items on sale! 
 On the landing page, the user is presented information about the store. New products are presented in a slider and at the bottom of the page, all the sale items are displayed.
+<br/>
 ![image2](https://github.com/bee2805/ThePlantPlace/blob/main/README_assets/home_feature.jpg)
 
 ### Browse Through Products
