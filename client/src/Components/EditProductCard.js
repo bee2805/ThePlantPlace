@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import monsteraMinima from "../assets/Zeylanica.jpg";
 import EditProduct from '../Components/EditProduct';
 import axios from 'axios';
 

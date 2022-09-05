@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
 function CartItem (props) {
 
+    const removeItem = () => {
+        props.rerender()
+        sessionStorage.removeItem('cart');
+    }
 
     return(
         <>
@@ -12,7 +16,7 @@ function CartItem (props) {
                 <p>{props.name}</p>
                 <p className="price">R{props.price}</p>
                 <p>{props.qty}</p>
-                <p className="removeItem">Remove Item</p>
+                <p onClick={removeItem} className="removeItem">Remove Item</p>
             </div>
         </div> {/* cart Item */}
         </>

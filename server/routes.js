@@ -2,6 +2,7 @@ const express = require('express');
 const router = express();
 const productModel = require('./models/productSchema');
 const userModel = require('./models/addUser');
+const orderModel = require('./models/orderSchema');
 const multer = require('multer');
 const path = require('path');
 const jwt = require('jsonwebtoken');
@@ -101,7 +102,7 @@ router.post('/api/addUser', (req, res) => {
         name: req.body.name,
         email: req.body.email,
         password: req.body.password,
-        cart: req.body.cart
+        status: req.body.status
     })
 
     newUser.save()
@@ -121,18 +122,49 @@ router.post('/api/loginUser', async(req, res) => {
     if(findUser){
         
         if(await bcrypt.compare(req.body.password, findUser.password)){
-
-            const userToken = jwt.sign({
-                email: req.body.email
-            }, '!j$ioj220Bz%') // secret key
-            return res.json({status: "Ok", user: userToken});
-            
+            // const userToken = jwt.sign({
+            //     email: req.body.email
+            // }, '!j$ioj220Bz%') // secret key
+            // return res.json({status: "Ok", user: userToken});
+            res.json({user: true, status: findUser.status, email: findUser.email, name: findUser.name});
         }else{
             res.json({user: false});
         }
     } else {
         res.json({msg: "user not found"})
     }
+});
+
+// ORDER ROUTES
+// get all products
+router.get('/api/allOrders', async (req, res) => {
+    const findOrders = await orderModel.find();
+    res.json(findOrders);
+});
+
+// add orders
+router.post('/api/addOrder', (req, res) => {
+    const newOrder = orderModel({
+        date: req.body.date,
+        clientName: req.body.clientName,
+        quantity: req.body.quantity,
+        price: req.body.price
+    })
+
+    newOrder.save()
+    .then (item => {
+        res.json(item)
+    })
+    .catch(err => {
+        res.status(400).json({msg: "There is an error", err})
+    })
+});
+
+// dispatch/remove order
+// delete a product
+router.delete('/api/dispatchOrder/:id', async(req, res) => {
+    const findOrder = await orderModel.remove({_id: req.params.id});
+    res.json(findOrder);
 });
 
 module.exports = router;

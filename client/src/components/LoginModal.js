@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 function LoginModal (props) {
-
+    const navigate = useNavigate();
     const [userValues, setUserValues] = useState();
 
     const closeModal = () =>{
@@ -24,16 +25,18 @@ function LoginModal (props) {
 
         axios.post('http://localhost:5000/api/loginUser', payload)
         .then((res) => {
-            if(!res.data){
-                alert("User nor found");
-            } else {
-                if(res.data.user){
-                    alert("welcome");
-                    sessionStorage.setItem('token', res.data.user)
+            if(res.data.user){
+                sessionStorage.setItem('name', res.data.name)
+                sessionStorage.setItem('status', res.data.status)
+                const admin = sessionStorage.getItem('status');
+
+                if (admin === 'Admin') {
+                    navigate('/InventoryManagement')
+                } else if (admin === '' || admin === null || admin === undefined|| admin === false) {
                     closeModal()
-                } else {
-                    alert("User not found");
                 }
+            } else {
+                alert("User not found");
             }
         })
         .catch(function(error){

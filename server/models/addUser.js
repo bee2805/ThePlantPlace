@@ -5,7 +5,7 @@ const addUser = mongoose.Schema({
     name:{ type: String, required: true },
     email:{ type: String, required: true },
     password:{ type: String, required: true },
-    cart: { type: Array, default:[]}
+    status: { type: String }
 }); //END OF CLIENT SCHEMA
 
 addUser.pre('save', async function(next){

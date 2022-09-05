@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import {NavLink} from 'react-router-dom';
 import LoginModal from '../Components/LoginModal';
-import RegisterModal from "./Register";
 import CartModal from "./CartModal";
+import Logout from "./SubComponents/Logout";
 
 function AdminNav () {
     const [loginModal, setLoginModal] = useState();
-    const [registerModal, setRegisterModal] = useState();
+    const [logoutModal, setLogoutModal] = useState();
     const [cartModal, setCartModal] = useState();
+    let activeUser = sessionStorage.getItem('name');
 
     const login = () => {
-        setLoginModal(<LoginModal rerender={setLoginModal}/>);
-    }
-
-    const register = () => {
-        setRegisterModal(<RegisterModal rerender={setRegisterModal}/>);
+        if(!activeUser){
+            setLoginModal(<LoginModal rerender={setLoginModal}/>);
+        } else {
+            setLogoutModal(<Logout rerender={setLogoutModal}/>);
+        }
     }
 
     const cart = () => {
@@ -25,7 +26,7 @@ function AdminNav () {
         <div className="NavBar">
             {cartModal}
             {loginModal}
-            {registerModal}
+            {logoutModal}
             <div className="NavItems">
                 <NavLink to="/InventoryManagement"> <p>Inventory</p> </NavLink>
                 <NavLink to="/IncomingOrders"> <p>Orders</p> </NavLink>
@@ -35,7 +36,7 @@ function AdminNav () {
 
             <div className="shopping-bag" onClick={cart}></div>
             <div className="user-img" onClick={login}></div>
-            <p className="login" onClick={register}>register</p>
+            <p className="username">{activeUser}</p>
         </div>
     )
 }

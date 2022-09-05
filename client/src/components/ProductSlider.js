@@ -17,7 +17,6 @@ function ProductSlider(){
             let URL = 'http://localhost:5000/productImages/';
 
             let newProducts = data.slice(-5);
-            console.log(newProducts)
 
             let newest = newProducts.map((item) => <ProductCard
                 key={item._id}
@@ -46,8 +45,6 @@ function ProductSlider(){
         slidesToShow: 3,
         centerMode: true,
         centerPadding: 3,
-        // autoplay: true,
-        // autoplaySpeed: 2500
     }
 
     return(

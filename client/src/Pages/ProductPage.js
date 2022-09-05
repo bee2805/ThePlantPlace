@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProductCard from '../Components/ProductCard';
 import NavBar from '../Components/NavBar';
 import axios from 'axios';

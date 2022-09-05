@@ -3,11 +3,15 @@ import {useNavigate} from "react-router-dom"
 import axios from 'axios';
 import NavBar from '../Components/NavBar';
 import LoginModal from '../Components/LoginModal';
+import SaleProductPage from '../Components/SubComponents/SaleProductPage';
+import NoSaleProductPage from '../Components/SubComponents/NoSaleProductPage';
 
 function IndividualProduct () {
 
     let productId = sessionStorage.getItem('productId');
-    const [imgUrl, setImgUrl] = useState()
+    const [imgUrl, setImgUrl] = useState();
+    const [sale, setSale] = useState();
+    const [noSale, setNoSale] = useState();
 
     let navigate = useNavigate();
     const quantity = useRef();
@@ -18,8 +22,8 @@ function IndividualProduct () {
         productName: "",
         price: "",
         productDescription: "",
-        // date: { type: Date, default: Date.now },
         stock: "",
+        discount: "",
         pot1: "", 
         pot2: "", 
         pot3: "",
@@ -27,15 +31,17 @@ function IndividualProduct () {
     });
 
     useEffect(() => {
+
         axios.get('http://localhost:5000/api/oneProduct/' + productId)
         .then(res => {
             let data = res.data;
             setProductData({
                 productName: data.productName,
-                price: data.price,
+                price: +data.price,
                 productDescription: data.productDescription,
                 // date: { type: Date, default: Date.now },
                 stock: data.stock,
+                discount: +data.discount,
                 pot1: data.variations.pot1, 
                 pot2: data.variations.pot2, 
                 pot3: data.variations.pot3,
@@ -44,6 +50,13 @@ function IndividualProduct () {
             let URL = 'http://localhost:5000/productImages/' + data.image;
             setImgUrl(URL);
         });
+
+        // if(productData.discount > 0){
+        //     setSale(<SaleProductPage price={+productData.price} discount={productData.discount}/>)
+        // } else {
+        //     setNoSale(<NoSaleProductPage price={+productData.price} discount={productData.discount}/>)
+        // }
+
     },[]);
 
     const back = () => {
@@ -53,7 +66,7 @@ function IndividualProduct () {
 
     const addToCart = () => {
         let cart = sessionStorage.getItem('cart')
-        let user = sessionStorage.getItem('token')
+        let user = sessionStorage.getItem('name')
 
         if(user === '' || user === null){
             alert('Please login first.')
@@ -63,13 +76,11 @@ function IndividualProduct () {
 
             if(cart === '' || cart === null){
                 let addProductToCart = {
-                    cartItem: {
-                        name: productData.productName,
-                        img: imgUrl,
-                        price: productData.price,
-                        id: productId,
-                        qty: 1,
-                    }
+                    name: productData.productName,
+                    img: imgUrl,
+                    price: productData.price,
+                    id: productId,
+                    qty: 1,
                 }
 
                 cartArray.push(addProductToCart);
@@ -91,6 +102,8 @@ function IndividualProduct () {
         }
     }
 
+    console.log(productData.price)
+
     return(
         <>
         {loginModal}
@@ -111,6 +124,7 @@ function IndividualProduct () {
                 </div>
 
                 <div className="additionalInfo">
+                    {sale} {noSale}
                     <h2><strong>R</strong>{productData.price}</h2>
                     <input type="number" placeholder="qty" ref={quantity}/>
                     <button onClick={addToCart}>+ Add to Cart</button>

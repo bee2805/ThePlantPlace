@@ -48,15 +48,13 @@ function LandingPage () {
         <div className="LandingPage">
             {/* header */}
             <div className="header">
-                <h3>Welcome to</h3>
-                <h1>The Plant Place</h1>
+                <div className='header-info'>
+                    <h3>Welcome to</h3>
+                    <h1>The Plant Place</h1>
 
-                <p>The plant Place prides themselves with being known for affordability when it comes to<br/>
-                house plants. The reason for this is because we include beautiful pots with each plant that<br/>
-                is included in the price! We have a passion for plants and love to share that passion<br/>
-                with fellow plant parents! Each plant is personally potted with love and includes a hand<br/>
-                a hand written care card to ensure you keep your babies happy!</p>
-                <a href='/ProductPage'><button>View Products</button></a>
+                    <p>The plant Place prides themselves with being known for affordability when it comes to house plants. The reason for this is because we include beautiful pots with each plant that is included in the price! We have a passion for plants and love to share that passion with fellow plant parents! Each plant is personally potted with love and includes a hand a hand written care card to ensure you keep your babies happy!</p>
+                    <a href='/ProductPage'><button>View Products</button></a>
+                </div>
             </div>{/* header */}
 
             {/* new to store */}

@@ -1,10 +1,34 @@
-import React from 'react';
-import MonsteraMinima from "../assets/MonsteraMinima.jpg";
-import monstera from "../assets/monstera.jpg";
-import ScindapsusPictus from "../assets/ScindapsusPictus.jpg";
+import React, { useState, useEffect } from 'react';
 import AdminNav from '../Components/AdminNav';
+import OrderItem from '../Components/OrderItem';
+import axios from 'axios';
 
 function IncomingOrders () {
+
+    const [renderOrders, setRenderOrders] = useState(false);
+    const [orders, setOrders] = useState();
+
+    useEffect(() => {
+        axios.get('http://localhost:5000/api/allOrders')
+        .then(res => {
+            let data = res.data;
+            // console.table(data)
+            let renderOrders = data.map((item) => <OrderItem
+                key={item._id}
+                orderId={item._id}
+                date={item.date}
+                clientName={item.clientName}
+                quantity={item.quantity}
+                price={item.price}
+                editRender={setRenderOrders}
+            />)
+
+            setOrders(renderOrders);
+            setRenderOrders(false);
+        })
+        .catch(err => console.log(err));
+    }, [renderOrders])
+
     return(
         <>
         <AdminNav/>
@@ -16,48 +40,11 @@ function IncomingOrders () {
             in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat <br/>
             non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-            <div className='tableHeadings'>
-                <p>Image</p>
-                <p>Order Number</p>
-                <p>Client Name</p>
-                <p>Price</p>
-                <p>Complete Order</p>
+            <div className='orders'>
+                {orders}
             </div>
-
-            
-            <div className='orderItem'>
-                <img src={MonsteraMinima}/>
-                <p>#21335</p>
-                <p>Rick Sanchez</p>
-                <p>R340</p>
-                <button>Dispatch</button>
-            </div>
-
-            <div className='orderItem'>
-                <img src={monstera}/>
-                <p>#21336</p>
-                <p>Lady Elsworth</p>
-                <p>R1000</p>
-                <button>Dispatch</button>
-            </div>
-
-            <div className='orderItem'>
-                <img src={ScindapsusPictus}/>
-                <p>#21337</p>
-                <p>Tim Burton</p>
-                <p>R510</p>
-                <button>Dispatch</button>
-            </div>
-            
             
         </div>
-        {/* footer */}
-        <div className='footer'>
-                <p>ThePlantPlace©2022</p>
-                <a href="tel:123-456-7890"><div className='call'></div></a>
-                <a href="mailto: ThePlantPlace@gmail.com"><div className='mail'></div></a>
-                <a href="https://instagram.com"><div className='instagram'></div></a>
-            </div>
         </>
     )
 }
