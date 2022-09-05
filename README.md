@@ -27,7 +27,7 @@
     
    <br />
    <br />
-   <a href="https://drive.google.com/file/d/13yYQyI_oNGEweU1Nftim3kCc0yPdMXoP/view?usp=sharing">View Demo</a>
+   <a href="https://drive.google.com/file/d/1sGQ49ef1iOYjSTdrGYWGNtMkqvor4kbB/view?usp=sharing">View Demo</a>
     ·
     <a href="https://github.com/bee2805/ThePlantPlace/issues">Report Bug</a>
     ·
@@ -217,7 +217,7 @@ This page showcases incoming orders that are made by the users. The orders inclu
 
 To see a run through of the application, click below:
 
-[View Demonstration](https://drive.google.com/file/d/13yYQyI_oNGEweU1Nftim3kCc0yPdMXoP/view?usp=sharing)
+[View Demonstration](https://drive.google.com/file/d/1sGQ49ef1iOYjSTdrGYWGNtMkqvor4kbB/view?usp=sharing)
 
 
 See the [open issues](https://github.com/bee2805/ThePlantPlace/issues) for a list of proposed features (and known issues).

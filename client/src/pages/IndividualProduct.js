@@ -8,8 +8,8 @@ function IndividualProduct () {
 
     let productId = sessionStorage.getItem('productId');
     const [imgUrl, setImgUrl] = useState();
-    const [sale, setSale] = useState();
-    const [noSale, setNoSale] = useState();
+    // const [sale, setSale] = useState();
+    // const [noSale, setNoSale] = useState();
 
     let navigate = useNavigate();
     const quantity = useRef();
@@ -122,7 +122,6 @@ function IndividualProduct () {
                 </div>
 
                 <div className="additionalInfo">
-                    {sale} {noSale}
                     <h2><strong>R</strong>{productData.price}</h2>
                     <input type="number" placeholder="qty" ref={quantity}/>
                     <button onClick={addToCart}>+ Add to Cart</button>

@@ -40,11 +40,9 @@ function ProductPage () {
         <div className="ProductPage">
             <h3>Shop Our</h3>
             <h1>Product Range</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br/>
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation<br/>
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit<br/>
-            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat <br/>
-            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Explore all of our products! Order now and delivery will between 2-4 working days.<br/>
+            Each Plant comes with a pot of your choice included in the price!<br/>
+            This Month selected plants are 20% off. Hurry while stocks last!</p>
 
             {/* products */}
             <div className='products'>

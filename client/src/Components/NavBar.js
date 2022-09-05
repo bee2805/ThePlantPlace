@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {NavLink} from 'react-router-dom';
 import LoginModal from '../Components/LoginModal';
 import Logout from "./SubComponents/Logout";
