@@ -129,11 +129,11 @@ On the landing page, the user is presented information about the store. New prod
 
 ### Browse Through Products
 The product page displays all the products that are available in the store by reading the products from the database and displaying them dynamically on the site.
-![image3](https://github.com/bee2805/ThePlantPlace/blob/main/app/src/main/res/drawable/categories.jpg)
+![image3](https://github.com/bee2805/ThePlantPlace/blob/main/README_assets/product_page_feature.jpg)
 
 ### Inventory Management
 The admin profile will be able to manage the stock available on the e-commerse store. This includes adding, removing and altering information such as price, qty of the product. They will aso be able to put certain products on sale.
-![image4](https://github.com/bee2805/ThePlantPlace/blob/main/app/src/main/res/drawable/question_screen.jpg)
+![image4](https://github.com/bee2805/ThePlantPlace/blob/main/README_assets/manage_products.jpg)
 
 ### Order Processing
 This page showcases incoming orders that are made by the users. The orders include information about the order as well as a dispatch button that removes it from the database.
