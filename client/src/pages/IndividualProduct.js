@@ -3,8 +3,6 @@ import {useNavigate} from "react-router-dom"
 import axios from 'axios';
 import NavBar from '../Components/NavBar';
 import LoginModal from '../Components/LoginModal';
-import SaleProductPage from '../Components/SubComponents/SaleProductPage';
-import NoSaleProductPage from '../Components/SubComponents/NoSaleProductPage';
 
 function IndividualProduct () {
 

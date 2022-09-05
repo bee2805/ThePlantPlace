@@ -93,12 +93,12 @@ Ensure that you have the latest version of [NPM](https://www.npmjs.com/) install
 Here are a couple of ways to clone this repo:
 
 1. GitHub Desktop </br>
-Enter `https://github.com/bee2805/ThePlantPlace` into the URL field and press the `Clone` button.
+Enter `https://github.com/bee2805/ThePlantPlace.git` into the URL field and press the `Clone` button.
 
 2. Clone Repository </br>
 Run the following in the command-line to clone the project:
    ```sh
-   git clone https://github.com/bee2805/ThePlantPlace
+   git clone https://github.com/bee2805/ThePlantPlace.git
    ```
     Open `Software` and select `File | Open...` from the menu. Select cloned directory and press `Open` button
 
@@ -158,35 +158,35 @@ This page showcases incoming orders that are made by the users. The orders inclu
 <!-- stipulate all of the functionality you included in the project -->
 <!-- This is your time to shine, explain the technical nuances of your project, how did you achieve the final outcome!-->
 
-* Validation of inputs
-* XML for the layout and styling
-* Kotlin for the functionality
-* Different questions are dynamically displayed
+* Built and styled using HTML and CSS
+* Utilised CRUD operations to create, read, update and delete data from the database
+* Used MongoDB to store the database
+* Utilised Session Storage for signed in users as well as cart items
+* Implemented Routing with React-Router
+* Implemented useNaviage to ensure that admin profiles are navigated to the admin pages upon sign in.
+* Insalled axios on the project with the command "npm i axios"
+* Functionality for reading the input values of a form
+* Made use props to dynamically input data drom the database
+* Made use of useStates and UseEffects
 
 #### Highlights
 <!-- stipulated the highlight you experienced with the project -->
-* It was super exciting to learn Kotlin and build my very first android app!
-* Ater getting my muse, which was OK Boomer, the excitement grew each day. I had a lot of fun doing the research, especially for the lyric-based questions. 
-* I had a lot of fun doing the research, especially for the lyric-based questions. 
+* Learning the MERN stack
+* Using props to dynamically show the information from the database
+* Building and Styling the project
 
 #### Challenges
 <!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
-* Because of the way I set up my questions, I had challenges when trying to navigate to the next question activity in a specific genre.
-* I struggled to set the session storage for the scores from each category from the results activity.
-
-
-#### Above And Beyond
-
-* I implemented different ways in which a question can be answered - Either a text input with appropriate validation or selecting between three answers.
-* 8 questions per category instead of 5
-* 5 categories instead of 3
+* Adding more than one item to the cart
+* I struggled with clearing the session storage of only one value. I tried sessionStorage(‘productId’).clear() - this said that sessionStorage is not a function. I then tried sessionStorage.clear(‘productId’) - which cleared all session storage. After some reasearch I discovered that .clear() removes everything from the session storage, but I can use .removeItem(‘productId’) to just remove one value.
 
 ### Future Implementation
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
-
-* I'd like to implement the high scores from each category.
-* Visual communication when the incorrect or correct answer is chosen
-* A light and dark mode toggle in the settings menu
+* Add multiple items to the cart
+* Display sale on the individual product page
+* The Images on the product page are low quality, in the future I’d like to include more high quality photos
+* A counter by the cart to display that users have added items.
+* Better styling on admin pages - more specifically on the incoming orders page
 
 <!-- MOCKUPS -->
 ## Final Outcome
@@ -233,13 +233,8 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 <!-- all resources that you used and Acknowledgements here -->
-* [OK Boomer Website](https://okboomer.game/)
-* [OK Boomer Instagram](https://www.instagram.com/okboomer.game/)
-* [OK Boomer Behance Project](https://www.behance.net/gallery/145988733/Ok-Boomer-Branding-and-Design-for-Trivia-Game)
-* [Boomer Questions and imagery Source 1](https://www.buzzfeed.com/briangalindo/quiz-that-is-easy-for-baby-boomers-only)
-* [Boomer Questions and imagery Source 2](https://www.buzzfeed.com/sarahaspler/boomer-trivia-quiz)
-* [Gen X Questions](https://www.buzzfeed.com/briangalindo/only-gen-xers-are-passing-this-quiz)
-* [Millennial Questions](https://www.buzzfeed.com/briangalindo/easy-2000s-trivia-quiz-for-millennials)
-* [Gen Z Questions](https://www.buzzfeed.com/farrahpenn/these-trivia-questions-will-separate-gen-z-cuspers-from)
-* [Mockups](https://www.behance.net/gallery/112977919/Google-Pixel-5-Mockup-Free-Download)
-* All the links to specific imagery is displayed in the code
+* [All Product Images](https://unsplash.com/@feeypflanzen)
+* [React Slick Documentation](https://react-slick.neostack.com/)
+* [3D slider](https://github.com/chrisdesilva/3d-slider)
+* [Sale info Image](https://unsplash.com/photos/bBiuSdck8tU)
+* [Header Image](https://unsplash.com/photos/W5XTTLpk1-I)
