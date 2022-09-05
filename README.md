@@ -129,14 +129,20 @@ On the landing page, the user is presented information about the store. New prod
 
 ### Browse Through Products
 The product page displays all the products that are available in the store by reading the products from the database and displaying them dynamically on the site.
+<br>
+
 ![image3](https://github.com/bee2805/ThePlantPlace/blob/main/README_assets/product_page_feature.jpg)
 
 ### Inventory Management
 The admin profile will be able to manage the stock available on the e-commerse store. This includes adding, removing and altering information such as price, qty of the product. They will aso be able to put certain products on sale.
+<br>
+
 ![image4](https://github.com/bee2805/ThePlantPlace/blob/main/README_assets/manage_products.jpg)
 
 ### Order Processing
 This page showcases incoming orders that are made by the users. The orders include information about the order as well as a dispatch button that removes it from the database.
+<br>
+
 ![image5](https://github.com/bee2805/ThePlantPlace/blob/main/README_assets/order_processing.jpg)
 
 
@@ -195,16 +201,16 @@ This page showcases incoming orders that are made by the users. The orders inclu
 
 ### Mockups
 
-![image8](https://github.com/bee2805/ThePlantPlace/blob/main/app/src/main/res/drawable/mockup_one.jpg)
+![image8](https://github.com/bee2805/ThePlantPlace/blob/main/README_assets/mockup1.jpg)
 <br>
 
-![image9](https://github.com/bee2805/ThePlantPlace/blob/main/app/src/main/res/drawable/mockup_four.jpg)
+![image9](https://github.com/bee2805/ThePlantPlace/blob/main/README_assets/mockup2.jpg)
 <br>
 
-![image10](https://github.com/bee2805/ThePlantPlace/blob/main/app/src/main/res/drawable/mockup_three.jpg)
+![image10](https://github.com/bee2805/ThePlantPlace/blob/main/README_assets/mockup3.jpg)
 <br>
 
-![image11](https://github.com/bee2805/ThePlantPlace/blob/main/app/src/main/res/drawable/mockup_two.jpg)
+![image11](https://github.com/bee2805/ThePlantPlace/blob/main/README_assets/mockup4.jpg)
 
 <!-- VIDEO DEMONSTRATION -->
 ### Video Demonstration
@@ -242,4 +248,5 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 * [Header Image](https://unsplash.com/photos/W5XTTLpk1-I)
 * [Landing Page features Mockup](https://www.creativefabrica.com/product/free-website-mockup/ref/235640/)
 * [The rest of the feature Mockups](https://www.mockupworld.co/free/website-presentation-showcase-mockup/)
-*
+* [Mockup One]()
+* [Mockup Two](https://mockuptree.com/free/display-imac-mockup/)
