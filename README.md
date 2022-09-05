@@ -241,3 +241,4 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 * [Sale info Image](https://unsplash.com/photos/bBiuSdck8tU)
 * [Header Image](https://unsplash.com/photos/W5XTTLpk1-I)
 * [Landing Page features Mockup](https://www.creativefabrica.com/product/free-website-mockup/ref/235640/)
+* [The rest of the feature Mockups](https://www.mockupworld.co/free/website-presentation-showcase-mockup/)
