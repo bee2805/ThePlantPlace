@@ -17,7 +17,7 @@
 <p align="center">
 
   <a href="https://github.com/bee2805/ThePlantPlace">
-    <img src="app/src/main/res/drawable/logo.png" alt="Logo" width="140" height="140">
+    <img src="README_assets/logo.jpg" alt="Logo" width="140" height="140">
   </a>
   
   <h3 align="center">OK Boomer</h3>
