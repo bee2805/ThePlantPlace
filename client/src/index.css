@@ -961,7 +961,7 @@ slider .productCard{
 .AddProduct{
   width: 25%;
   float: left;
-  height: 80vh;
+  height: 65vh;
   padding: 5%;
   background-color: #7B977C;
   border-radius: 20px;
@@ -1008,7 +1008,7 @@ slider .productCard{
 }
 
 .AddProduct h2{
-  margin-top: 100px;
+  margin-top: 10px;
   margin-bottom: 5%;
 }
 
