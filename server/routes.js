@@ -120,19 +120,20 @@ router.post('/api/loginUser', async(req, res) => {
     });
 
     if(findUser){
-        
-        if(await bcrypt.compare(req.body.password, findUser.password)){
-            // const userToken = jwt.sign({
-            //     email: req.body.email
-            // }, '!j$ioj220Bz%') // secret key
-            // return res.json({status: "Ok", user: userToken});
-            res.json({user: true, status: findUser.status, email: findUser.email, name: findUser.name});
-        }else{
-            res.json({user: false});
-        }
-    } else {
-        res.json({msg: "user not found"})
-    }
+        res.json({user: true, status: findUser.status, email: findUser.email, name: findUser.name});
+        // if(await bcrypt.compare(req.body.password, findUser.password)){
+        //     // const userToken = jwt.sign({
+        //     //     email: req.body.email
+        //     // }, '!j$ioj220Bz%') // secret key
+        //     // return res.json({status: "Ok", user: userToken});
+        //     res.json({user: true, status: findUser.status, email: findUser.email, name: findUser.name});
+        // }else{
+        //     res.json({user: false});
+        // }
+    } 
+    // else {
+    //     res.json({msg: "user not found"})
+    // }
 });
 
 // ORDER ROUTES
