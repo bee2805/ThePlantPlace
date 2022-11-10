@@ -7,7 +7,7 @@ const cors = require('cors');
 require('dotenv/config');
 
 app.use(cors({
-    origin: 'http://localhost:3000'
+    origin: 'http://localhost:3002'
 }));
 
 app.use('/productImages', express.static("productImages"));
