@@ -55,7 +55,7 @@ function IndividualProduct () {
         //     setNoSale(<NoSaleProductPage price={+productData.price} discount={productData.discount}/>)
         // }
 
-    },[]);
+    },[productId]);
 
     const back = () => {
         sessionStorage.removeItem('productId');
